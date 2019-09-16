@@ -1,0 +1,21 @@
+<div class="iostss">
+    <div id="modelWrapper">
+        <div class="header-title">1、下载首次打开会更新30秒</div>
+        <div class="header-content">
+            <img class="header-left-img" src=<%= tipsImgUrl %>>
+        </div>
+        <div class="bottom-title">2、更新完毕后即可进入游戏</div>
+        <img class="bottom-img" src=<%=baseUrl+"/images/bottomBg.jpg"%>>
+        <div class="bottom-btn">我已了解</div>
+    </div>
+
+</div>
+<script>
+    function downloadFuc() {
+        $(".iostss").css("z-index", "1");
+        $(".iostss").css("opacity", "1");
+    }
+    $("#modelWrapper").click(function () {
+        window.location = "<%- iosUrl.url %>";
+    });
+</script>

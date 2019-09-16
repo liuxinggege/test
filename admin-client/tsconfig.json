@@ -1,0 +1,47 @@
+// // tsconfig.json
+// {
+//     "compilerOptions": {
+//         // 与 Vue 的浏览器支持保持一致
+//         "target": "ES6",
+//         // 这可以对 `this` 上的数据属性进行更严格的推断
+//         "strict": true,
+//         // 如果使用 webpack 2+ 或 rollup，可以利用 tree-shake:
+//         "module": "commonjs",
+//         "moduleResolution": "node",
+//         "sourceMap": true,
+//         "allowJs": true
+//     }
+// }
+{
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["types/*"]
+    },
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "allowJs": true,
+    "module": "es2015",
+    "target": "es6",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es6",
+      "es2015.promise",
+      "dom.iterable"
+    ],
+    "sourceMap": true,
+    "pretty": true,
+    "strictNullChecks": false
+  }
+}

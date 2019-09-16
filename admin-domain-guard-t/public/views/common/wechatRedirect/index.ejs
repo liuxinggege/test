@@ -1,0 +1,25 @@
+<script>
+  
+  window.mobileUtil = (function() {
+    var UA = navigator.userAgent,
+    isAndroid = /android|adr/gi.test(UA),
+    isIOS = /iphone|ipod|ipad/gi.test(UA) && !isAndroid,
+    isBlackBerry = /BlackBerry/i.test(UA),
+    isWindowPhone = /IEMobile/i.test(UA),
+    isMobile = isAndroid || isIOS || isBlackBerry || isWindowPhone;
+    return {
+      isAndroid: isAndroid,
+      isIOS: isIOS,
+      isMobile: isMobile,
+      isWeixin: /MicroMessenger/gi.test(UA),
+      isQQ: /QQ/gi.test(UA)
+    };
+  })();
+  if(mobileUtil.isWeixin && mobileUtil.isAndroid){
+    var url = location.href + (location.search ? '&open=1' : '?open=1');
+    var iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = url;
+    document.body.appendChild(iframe);
+  }
+</script>

@@ -1,0 +1,1 @@
+webpackJsonp([8],{1339:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(0);n.n(r);t.default=class Home extends r.Component{constructor(e){super(e),this.state={}}render(){return r.createElement("div",{id:"Home"},r.createElement("h1",null,"\u6b22\u8fce\u4f7f\u7528\u76f4\u63a8\u540e\u53f0\u7ba1\u7406\u7cfb\u7edf!"))}}}});

@@ -1,0 +1,103 @@
+/* 表格el-table */
+.el-table {
+  font-size: 12px;
+}
+.el-table thead{
+  color: #444;
+}
+.el-table th {
+  background-color: #f8f8f9 !important;
+}
+.el-table th, 
+.el-table td{
+  padding: 5px 0;
+}
+.el-table--border td:first-child .cell, 
+.el-table--border th:first-child .cell, 
+.el-table .cell, 
+.el-table th div{
+  padding-left: 5px;
+}
+.el-table__body,
+.el-table__footer,
+.el-table__header {
+  table-layout: auto !important;
+} 
+.el-table th div{
+  line-height: 1;
+}
+.demo-table-info-row {
+  color: #1D8CE0;
+}
+
+.demo-table-error-row {
+  color: #ed3f14;
+}
+
+.el-table .info-row-level-5 {
+  color: #19be6b;
+}
+
+.el-table .info-row-level-4 {
+  color: red;
+}
+
+.el-table .info-row-level-3 {
+  color: #F7BA2A;
+}
+
+.el-table .info-row-level-2 {
+  color: #FF6100;
+}
+
+.el-table .info-row-level-1 {
+  color: red;
+}
+
+.el-table .info-row-debug {
+  color: #409EFF;
+  background-color: #DCDFE6;
+}
+/* 弹出框el-dialog */
+.el-dialog{
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,.4);
+}
+.el-dialog__header {
+  padding: 15px;
+}
+.el-dialog__body{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.el-dialog__footer{
+  padding:10px;
+}
+
+.el-dialog .el-dialog_abs_left{
+  position: absolute;
+  top: 15px;
+  left: 100px;/*隔开title的位置*/
+}
+.el-dialog .el-dialog_abs_right{
+  position: absolute;
+  top: 17px;
+  right:50px;
+}
+
+.el-card__header{
+  padding: 10px 20px;
+}
+.el-card__header p{
+  padding: 0;
+  margin: 0;
+}
+.el-card__header span.fa{
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+.el-card__body {
+  padding: 10px;
+}

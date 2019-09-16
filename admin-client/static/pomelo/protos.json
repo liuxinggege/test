@@ -1,0 +1,35 @@
+{
+    "server": {
+        "bjl_getAGGameUrl": {
+            "code": {
+                "option": "required",
+                "type": "int32",
+                "tag": 1
+            },
+            "agGameUrl": {
+                "option": "required",
+                "type": "string",
+                "tag": 2
+            },
+            "__messages": {},
+            "__tags": {
+                "1": "code",
+                "2": "agGameUrl"
+            }
+        }
+    },
+    "client": {
+        "connector.entryHandler.preEnter": {
+            "c": {
+                "option": "required",
+                "type": "string",
+                "tag": 1
+            },
+            "__messages": {},
+            "__tags": {
+                "1": "c"
+            }
+        }
+    },
+    "version": "FmQTOnrYVbpqHpb6hXQaNg=="
+}

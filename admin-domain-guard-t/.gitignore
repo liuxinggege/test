@@ -1,0 +1,12 @@
+.DS_Store
+.history
+*.tar.gz
+*.zip
+
+node_modules
+.DS_Store
+config.json
+bin
+*.tar.gz
+.static_tmp
+yarn.lock

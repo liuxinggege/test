@@ -1,0 +1,21 @@
+diff a/src/views/VIPManager/information.vue b/src/views/VIPManager/information.vue	(rejected hunks)
+@@ -537,16 +537,17 @@ export default class Information extends Vue {
+             case "NIUNIU": game = "牛牛"; break;
+             case "JINHUA": game = "金花"; break;
+             case "XUEZHAN": game = "血战"; break;
+-            case "SUOH": game = "梭哈"; break;
++            case "SUOHA": game = "梭哈"; break;
+             case "BRNIUNIU": game = "百人牛牛"; break;
+             case "DOUDIZHU": game = "斗地主"; break;
+             case "HONGHEI": game = "红黑"; break;
+-            case "BU": game = "捕鱼"; break;
++            case "BUYU": game = "捕鱼"; break;
+             case "JDNIUNIU": game = "经典牛牛"; break;
+             case "PAODEKUAI": game = "跑得快"; break;
+             case "LONGHU": game = "龙虎"; break;
+             case "ERRENMAJIANG": game = "二人麻将"; break;
+             case "DEZHOUPUKE": game = "德州扑克"; break;
++            case "QIANGHONGBAO": game = "抢红包"; break;
+             default: return "还没有玩游戏";
+         }
+         return game;

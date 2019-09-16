@@ -1,0 +1,55 @@
+body {
+  background: #3b1100;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  min-width: 640px;
+  margin: 0 auto;
+}
+
+.bg_img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  margin-bottom: -2px;
+}
+
+.bg_btn,
+.bg_game {
+  position: absolute;
+  width: 100%;
+  bottom: -20%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 5;
+  height: 40%;
+}
+.bg_btn > div.btn{
+    flex: 1;
+}
+
+.bg_game {
+  bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.game {
+  width: 10rem;
+}
+.gameInfo_swtg02{
+    display: flex;
+    flex-direction: column;
+}
+.gameInfo_swtg02>h3{
+    font-size: 1.2em;
+}
+.gameInfo_swtg02>span{
+    font-size: 0.8em;
+}

@@ -1,0 +1,13 @@
+.content {
+    position: relative;
+    width: 100%;
+    min-width: 640px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.bg_img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+}

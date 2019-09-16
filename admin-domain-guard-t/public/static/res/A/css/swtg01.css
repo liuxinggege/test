@@ -1,0 +1,35 @@
+body {
+  background: #3b1100;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.bg_img {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.bg_btn,
+.bg_game {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bg_game {
+  bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.game {
+  width: 10rem;
+}

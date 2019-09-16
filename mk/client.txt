@@ -1,0 +1,262 @@
+total 440
+-rw-r--r--   1 leonliu  staff   6122 Oct 25 09:34 App.vue         //在main.js定义，控制页面启动，五分钟密码检验
+drwxr-xr-x  16 leonliu  staff    512 Oct 25 09:34 api             //接口请求命名文件 页面请求时import api from 'src/api' 
+drwxr-xr-x   7 leonliu  staff    224 Aug 24 01:10 assets          //logo图片、背景图片等 
+drwxr-xr-x   7 leonliu  staff    224 Aug 24 01:10 components      //单页页面文件
+-rw-r--r--   1 leonliu  staff    165 Oct 20 20:16 config.json     //服务请求设备
+drwxr-xr-x   2 leonliu  staff     64 Oct 22 13:28 lib             //自定义一些js文件，并在main.js引入，目前项目没有涉及
+-rw-r--r--   1 leonliu  staff   2187 Oct 25 09:34 main.js         //入口文件引入，定义插件或者组件
+-rw-r--r--   1 leonliu  staff  20608 Oct 24 10:50 router.js       //路由定义，在main.js引入，直接搜索中文title，即可查找页面 路由跳转$router.push({name:xxx})/$router.push({path:xxx})
+-rw-r--r--   1 leonliu  staff  41644 Oct 23 13:58 store.js        //状态管理页面 简化的vuex,在main.js引入  页面使用时import store from 'src/store'
+-rw-r--r--   1 leonliu  staff  14120 Oct 19 16:23 vuexStore.js    //vuex 写法的状态管理，在main.js引入  
+
+./api:             //寻找接口文件时，api.station.getOwnList() 即为station文件下的getOwnList方法
+total 120
+-rw-r--r--  1 leonliu  staff  1142 Oct  9 19:47 analyze.js        //环境监测统计相关
+-rw-r--r--  1 leonliu  staff   129 Aug 24 01:10 audio.js          //语音广播接口
+-rw-r--r--  1 leonliu  staff  3274 Oct 24 10:50 gas.js            //模拟量接口相关
+-rw-r--r--  1 leonliu  staff  1003 Aug 24 01:10 index.js          //入口文件，扩展文件时先定义
+-rw-r--r--  1 leonliu  staff   558 Oct 10 17:24 log.js            //日志接口
+-rw-r--r--  1 leonliu  staff   535 Aug 24 01:10 permission.js     //权限接口
+-rw-r--r--  1 leonliu  staff   644 Aug 24 01:10 role.js           //角色接口
+-rw-r--r--  1 leonliu  staff  4249 Oct 11 16:10 routeLine.js      //人员定位相关接口
+-rw-r--r--  1 leonliu  staff  2845 Aug 24 01:10 search.js         //人员定位统计接口
+-rw-r--r--  1 leonliu  staff  1352 Oct 24 10:50 setting.js        //系统设置
+-rw-r--r--  1 leonliu  staff  1800 Oct 24 10:50 station.js        //分站相关
+-rw-r--r--  1 leonliu  staff  1501 Oct 25 09:34 switch.js         //开关量接口相关
+-rw-r--r--  1 leonliu  staff  2207 Oct  9 19:47 user.js           //系统用户接口相关
+-rw-r--r--  1 leonliu  staff  1305 Aug 24 01:10 video.js          //视屏监控接口相关
+
+./assets:  //logo图片、背景图片等 
+total 2424
+-rw-r--r--  1 leonliu  staff    5437 Aug 24 01:10 head_01.jpg
+-rw-r--r--  1 leonliu  staff   47227 Aug 24 01:10 head_02.jpeg
+-rw-r--r--  1 leonliu  staff  679889 Aug 24 01:10 login.jpg
+-rw-r--r--  1 leonliu  staff  493825 Aug 24 01:10 login2.jpg
+-rw-r--r--  1 leonliu  staff    6849 Aug 24 01:10 logo.png
+
+./components:  
+total 0
+drwxr-xr-x  44 leonliu  staff  1408 Oct 25 09:34 common  //公用组件，相对引用如import addCard from './../common/addCard.vue';
+drwxr-xr-x   4 leonliu  staff   128 Oct 22 13:28 images  //图片引用
+drwxr-xr-x   3 leonliu  staff    96 Oct 25 09:34 login   //登录组件
+drwxr-xr-x   4 leonliu  staff   128 Oct 22 13:28 styles  //公用样式，相对引用@import '../styles/common.less'
+drwxr-xr-x  15 leonliu  staff   480 Oct 25 09:34 views   //系统相关展示页面
+
+./components/common:  //组件引用时，1.import addCard from './../common/addCard.vue'; 2.export default {components: {addCard}}
+total 952
+-rw-r--r--  1 leonliu  staff  20830 Oct 17 15:51 Line.vue
+-rw-r--r--  1 leonliu  staff  11292 Oct 17 15:51 Line5.vue
+-rw-r--r--  1 leonliu  staff  20979 Sep 30 10:21 addArea.vue
+-rw-r--r--  1 leonliu  staff   8966 Oct 17 15:51 addCard.vue          //识别卡添加
+-rw-r--r--  1 leonliu  staff  14229 Oct 25 09:34 addDrainage.vue
+-rw-r--r--  1 leonliu  staff  11659 Aug 24 01:10 addPerson.vue
+-rw-r--r--  1 leonliu  staff  23983 Sep  7 11:28 addRouteArea.vue
+-rw-r--r--  1 leonliu  staff   7098 Sep 12 13:46 addSen.vue
+-rw-r--r--  1 leonliu  staff  27408 Oct 17 15:51 addSwitch.vue
+-rw-r--r--  1 leonliu  staff   5209 Oct 17 15:51 addVoice.vue
+-rw-r--r--  1 leonliu  staff   3735 Aug 24 01:10 addsgAlarm.vue
+-rw-r--r--  1 leonliu  staff   9404 Oct 23 13:58 addupEquip.vue       //电源、交换机添加
+-rw-r--r--  1 leonliu  staff  10943 Oct 23 13:58 addupStation.vue     //分站添加
+-rw-r--r--  1 leonliu  staff   9151 Oct 19 16:23 alarmLevelBar.vue
+-rw-r--r--  1 leonliu  staff   9789 Sep 16 19:25 areaLines.vue
+-rw-r--r--  1 leonliu  staff   8463 Oct 19 16:23 callTabel.vue
+-rw-r--r--  1 leonliu  staff   1345 Aug 24 01:10 clock.vue            
+-rw-r--r--  1 leonliu  staff   3299 Sep 22 10:43 echartBar.vue       //柱状图添加
+-rw-r--r--  1 leonliu  staff   2052 Aug 24 01:10 findSensor.vue
+-rw-r--r--  1 leonliu  staff  32756 Oct 17 15:51 gangedBar.vue
+-rw-r--r--  1 leonliu  staff   8093 Aug 24 01:10 gasHistoryLine.vue
+-rw-r--r--  1 leonliu  staff   6762 Sep 22 10:43 gasline.vue
+-rw-r--r--  1 leonliu  staff  21820 Oct 17 15:51 historyLine.vue
+-rw-r--r--  1 leonliu  staff   3626 Aug 24 01:10 kline.vue
+-rw-r--r--  1 leonliu  staff   7302 Aug 24 01:10 lines.vue
+-rw-r--r--  1 leonliu  staff   9638 Oct 25 09:34 linkBar.vue
+-rw-r--r--  1 leonliu  staff    959 Aug 24 01:10 myPagination.vue
+-rw-r--r--  1 leonliu  staff   2508 Sep 16 19:25 nonius.vue
+-rw-r--r--  1 leonliu  staff   1442 Aug 24 01:10 password.vue
+-rw-r--r--  1 leonliu  staff   2815 Sep 30 10:21 password2.vue
+-rw-r--r--  1 leonliu  staff   2154 Aug 24 01:10 pluginBar.vue
+-rw-r--r--  1 leonliu  staff   7421 Oct 17 20:30 print.vue          //表格一维添加
+-rw-r--r--  1 leonliu  staff   4407 Aug 24 01:10 print2.vue         //表格二维添加
+-rw-r--r--  1 leonliu  staff   4445 Sep 22 10:43 printInfo.vue      //Element table 二维添加
+-rw-r--r--  1 leonliu  staff   5729 Oct 23 13:58 realTabel.vue
+-rw-r--r--  1 leonliu  staff  19625 Oct 15 10:14 reflexBar.vue
+-rw-r--r--  1 leonliu  staff  10297 Sep 30 10:21 scene.vue
+-rw-r--r--  1 leonliu  staff    971 Aug 24 01:10 secondPagination.vue 
+-rw-r--r--  1 leonliu  staff   2310 Sep  7 11:28 shortcut.vue       //快捷方式添加
+-rw-r--r--  1 leonliu  staff   1949 Aug 24 01:10 timeLine.vue
+-rw-r--r--  1 leonliu  staff  32675 Oct 25 09:34 upSensor.vue
+-rw-r--r--  1 leonliu  staff   5945 Aug 24 01:10 wellDetails.vue
+
+./components/images:
+total 80
+-rw-r--r--  1 leonliu  staff  13573 Aug 24 01:10 lg.png
+-rw-r--r--  1 leonliu  staff  23781 Aug 24 01:10 logo2.png
+
+./components/login:
+total 8
+-rw-r--r--  1 leonliu  staff  4070 Oct 25 09:34 login.vue        // isLogin = 0 退出  isLogin = 1 登录
+
+./components/styles:
+total 8
+-rw-r--r--  1 leonliu  staff  1765 Oct 19 18:25 common.less     //公用样式  相对引用@import '../styles/common.less'           
+
+./components/views:
+total 176
+-rw-r--r--   1 leonliu  staff  45280 Oct 23 13:58 Main0.vue    //主文件，心跳监测，区域报警，退出系统，修改密码等功能
+drwxr-xr-x   5 leonliu  staff    160 Oct 10 17:24 control      //联动控制
+drwxr-xr-x  10 leonliu  staff    320 Aug 24 01:10 error_page   //请求页面错误时展示页面
+drwxr-xr-x   9 leonliu  staff    288 Oct 25 09:34 gas_drainage //抽放系统，实时列表、报表统计
+-rw-r--r--   1 leonliu  staff  28683 Oct 25 09:34 home.vue     //首页、语音广播、人员定位、环境监测公用页面
+-rw-r--r--   1 leonliu  staff   5395 Sep 16 19:25 main.less    //主文件样式
+drwxr-xr-x   6 leonliu  staff    192 Oct 22 13:28 main_components   //全屏、锁屏等组件，Main0.vue使用
+drwxr-xr-x  27 leonliu  staff    864 Oct 24 10:50 route             //人员定位系统相关
+drwxr-xr-x  19 leonliu  staff    608 Oct 24 10:50 setting           //系统设置相关，如数据备份、操作日志等
+drwxr-xr-x   4 leonliu  staff    128 Aug 24 01:10 tables            //iview、element拖拽表格组件
+drwxr-xr-x   5 leonliu  staff    160 Oct 22 13:28 video             //视频监控
+drwxr-xr-x   3 leonliu  staff     96 Oct 23 13:58 voice              //语音广播
+drwxr-xr-x  35 leonliu  staff   1120 Oct 25 09:34 watching           //环境监测系统
+
+./components/views/control:
+total 104
+-rw-r--r--  1 leonliu  staff   5672 Sep 16 19:25 relation.vue        
+-rw-r--r--  1 leonliu  staff   5744 Aug 24 01:10 relation0.vue
+-rw-r--r--  1 leonliu  staff  35419 Oct 10 17:24 windwatt.vue
+
+./components/views/error_page:
+total 64
+-rw-r--r--  1 leonliu  staff  2348 Aug 24 01:10 401.less
+-rw-r--r--  1 leonliu  staff  1072 Aug 24 01:10 401.vue
+-rw-r--r--  1 leonliu  staff  1287 Aug 24 01:10 404.less
+-rw-r--r--  1 leonliu  staff  1004 Aug 24 01:10 404.vue
+-rw-r--r--  1 leonliu  staff  1756 Aug 24 01:10 500.less
+-rw-r--r--  1 leonliu  staff  1133 Aug 24 01:10 500.vue
+-rw-r--r--  1 leonliu  staff   382 Aug 24 01:10 error-page.less
+-rw-r--r--  1 leonliu  staff  3726 Aug 24 01:10 error-page.vue
+
+./components/views/gas_drainage:  //组件查找方法如，1.import addCard from './../common/addCard.vue'; 2.export default {components: {addCard}} 组件使用是驼峰命名法
+total 224
+-rw-r--r--  1 leonliu  staff  10820 Oct 25 09:34 actual.vue
+-rw-r--r--  1 leonliu  staff  12431 Aug 24 01:10 alldata.vue
+-rw-r--r--  1 leonliu  staff   7912 Oct 23 13:58 cumulant.vue
+-rw-r--r--  1 leonliu  staff  14998 Oct 24 10:50 inquire.vue
+-rw-r--r--  1 leonliu  staff   7628 Aug 24 01:10 manage.vue
+-rw-r--r--  1 leonliu  staff  28038 Oct 17 15:51 momentflow.vue
+-rw-r--r--  1 leonliu  staff  20705 Oct 24 10:50 system.vue    //抽放系统展示页面
+
+./components/views/main_components:  //组件查找方法如，1.import addCard from './../common/addCard.vue'; 2.export default {components: {addCard}} 组件使用是驼峰命名法
+total 40
+-rw-r--r--  1 leonliu  staff  2714 Aug 24 01:10 fullscreen.vue    //全屏组件
+-rw-r--r--  1 leonliu  staff  1061 Aug 24 01:10 locking-page.vue   //锁屏组件
+-rw-r--r--  1 leonliu  staff  4410 Aug 24 01:10 unlock.less        //解屏样式
+-rw-r--r--  1 leonliu  staff  2680 Aug 24 01:10 unlock.vue         //解屏组件
+
+./components/views/route:  //组件查找方法如，1.import addCard from './../common/addCard.vue'; 2.export default {components: {addCard}} 组件使用是驼峰命名法
+total 728
+-rw-r--r--  1 leonliu  staff  35418 Oct 17 20:30 areaDeploy.vue
+-rw-r--r--  1 leonliu  staff  11512 Aug 24 01:10 areaNow.vue
+-rw-r--r--  1 leonliu  staff  22496 Aug 24 01:10 callout.vue
+-rw-r--r--  1 leonliu  staff  15778 Aug 24 01:10 card.vue            //识别卡管理，是否为出入口、门禁口
+-rw-r--r--  1 leonliu  staff  19438 Aug 24 01:10 dayAreaAccess.vue
+-rw-r--r--  1 leonliu  staff   5181 Aug 24 01:10 department.vue      //部门管理
+-rw-r--r--  1 leonliu  staff   8591 Oct 24 10:50 detailTable.vue     //轨迹回放
+-rw-r--r--  1 leonliu  staff   3197 Aug 24 01:10 helpBar.vue 
+-rw-r--r--  1 leonliu  staff   9027 Aug 24 01:10 helpMsg.vue       
+-rw-r--r--  1 leonliu  staff   5943 Aug 24 01:10 line.vue           //活动轨迹查询  
+-rw-r--r--  1 leonliu  staff  12044 Aug 24 01:10 monthAreaAccess.vue
+-rw-r--r--  1 leonliu  staff   9381 Aug 24 01:10 monthWell.vue
+-rw-r--r--  1 leonliu  staff  12060 Aug 24 01:10 patrol.vue
+-rw-r--r--  1 leonliu  staff   6922 Aug 24 01:10 schedule.vue
+-rw-r--r--  1 leonliu  staff  44113 Aug 24 01:10 search.vue        //人员定位统计
+-rw-r--r--  1 leonliu  staff  14656 Aug 24 01:10 searchcard.vue
+-rw-r--r--  1 leonliu  staff   3356 Aug 24 01:10 table2excel.js    //导出Excel引用js  目前项目没有使用
+-rw-r--r--  1 leonliu  staff   9807 Aug 24 01:10 unNormal.vue      //员工异常统计
+-rw-r--r--  1 leonliu  staff  26173 Aug 24 01:10 user.vue          //人员管理，新增员工，查看管理在职、离职人员
+-rw-r--r--  1 leonliu  staff  16292 Aug 24 01:10 watch.vue         //当前人员列表展示，查看具体位置，活动轨迹
+-rw-r--r--  1 leonliu  staff  10289 Aug 24 01:10 withCard.vue
+-rw-r--r--  1 leonliu  staff   7284 Aug 24 01:10 worktype.vue
+
+./components/views/setting:
+total 448
+-rw-r--r--  1 leonliu  staff  13913 Sep  3 14:38 ErrorMessage.vue       
+-rw-r--r--  1 leonliu  staff   5449 Sep 22 10:43 areaRule.vue     
+-rw-r--r--  1 leonliu  staff  13715 Oct 15 10:14 areasetting.vue
+-rw-r--r--  1 leonliu  staff  24235 Sep 22 10:43 ddic.vue
+-rw-r--r--  1 leonliu  staff  18587 Sep 22 10:43 guide.vue
+-rw-r--r--  1 leonliu  staff   5683 Aug 24 01:10 import.vue    //文件上传
+-rw-r--r--  1 leonliu  staff   5627 Sep  7 11:28 license.vue   //授权管理
+drwxr-xr-x  3 leonliu  staff     96 Oct 23 13:58 log           //操作日志
+-rw-r--r--  1 leonliu  staff  13572 Oct 24 10:50 projectinfo.vue
+-rw-r--r--  1 leonliu  staff   7165 Aug 24 01:10 role.vue       //角色管理 不同角色不同权限
+-rw-r--r--  1 leonliu  staff  10575 Oct 24 10:50 setInfo.vue    //分站及设备配置
+-rw-r--r--  1 leonliu  staff  19630 Oct  9 19:47 setLine.vue    //页面编辑，曲线颜色编辑
+-rw-r--r--  1 leonliu  staff   8495 Sep 26 14:32 setList.vue    //页面编辑，列表显示编辑
+-rw-r--r--  1 leonliu  staff  14116 Oct 24 10:50 storeData.vue   //数据备份，备份文件可下载
+-rw-r--r--  1 leonliu  staff  19257 Oct 24 10:50 sub.vue         //gis底图编辑
+-rw-r--r--  1 leonliu  staff   8384 Oct 10 17:24 timesetting.vue
+-rw-r--r--  1 leonliu  staff   4665 Aug 24 01:10 user.vue       //用户管理  新增用户并分配角色
+
+./components/views/setting/log:
+total 24 
+-rw-r--r--  1 leonliu  staff  9589 Oct 23 13:58 index.vue   //操作日志 用户新增、删除分站等记录日志
+
+./components/views/tables:
+total 0
+drwxr-xr-x  8 leonliu  staff  256 Oct 22 13:28 components
+drwxr-xr-x  5 leonliu  staff  160 Aug 24 01:10 data
+
+./components/views/tables/components:
+total 48
+-rw-r--r--  1 leonliu  staff  2932 Oct 19 18:25 EledragableTable.vue  //elementui 拖拽  import Sortable from 'sortablejs';
+-rw-r--r--  1 leonliu  staff  1570 Oct 22 13:28 dragableTable.vue     //ivew 拖拽       import Sortable from 'sortablejs';
+-rw-r--r--  1 leonliu  staff  3356 Sep 26 14:32 table2excel.js     //导出Excel引用js  目前项目没有使用
+ 
+./components/views/tables/data:
+total 32
+-rw-r--r--  1 leonliu  staff  4064 Aug 24 01:10 table2csv.js    //导出csv引用js  目前项目没有使用
+-rw-r--r--  1 leonliu  staff  8062 Aug 24 01:10 table2excel.js  //导出Excel引用js  目前项目没有使用
+
+./components/views/video:
+total 104
+-rw-r--r--  1 leonliu  staff  21591 Oct 19 18:25 index.vue
+-rw-r--r--  1 leonliu  staff  18739 Aug 24 01:10 test.vue
+-rw-r--r--  1 leonliu  staff   6015 Oct 22 13:28 video.vue
+
+./components/views/voice:
+total 64
+-rw-r--r--  1 leonliu  staff  30030 Oct 23 13:58 index.vue
+
+./components/views/watching:   //组件相关查找方法如，1.import addCard from './../common/addCard.vue'; 2.export default {components: {addCard}} 组件使用是驼峰命名法
+total 1384
+-rw-r--r--  1 leonliu  staff  29073 Sep  3 14:38 Edittopo.vue
+-rw-r--r--  1 leonliu  staff  21109 Oct 19 18:25 analogCurve.vue
+-rw-r--r--  1 leonliu  staff  64187 Oct 19 16:23 analyze.vue   //环境监测统计公用页面
+-rw-r--r--  1 leonliu  staff   5137 Sep 28 19:15 area.vue
+-rw-r--r--  1 leonliu  staff  18490 Sep  7 11:28 areaPosSetting.vue   //区域类型、位置类型配置  位置类型配置时关联报警值、复电值、断电值  
+-rw-r--r--  1 leonliu  staff   5534 Oct 23 13:58 curvesdata.vue
+-rw-r--r--  1 leonliu  staff   1979 Aug 24 01:10 decode.vue           //上传加密文件解密
+-rw-r--r--  1 leonliu  staff  16508 Sep 22 10:43 dense.vue
+-rw-r--r--  1 leonliu  staff  19969 Aug 24 01:10 gashistory.vue
+-rw-r--r--  1 leonliu  staff  14400 Oct 15 10:14 gastime.vue
+-rw-r--r--  1 leonliu  staff   7714 Oct 25 09:34 handle.vue
+-rw-r--r--  1 leonliu  staff  31969 Oct 15 10:14 historyLine.vue
+-rw-r--r--  1 leonliu  staff   5476 Aug 24 01:10 looklog.vue
+-rw-r--r--  1 leonliu  staff  28600 Oct 15 10:14 mcall.vue
+-rw-r--r--  1 leonliu  staff  16410 Oct 23 13:58 nowtime.vue
+-rw-r--r--  1 leonliu  staff  11298 Oct 10 17:24 nowtimestate.vue
+-rw-r--r--  1 leonliu  staff  12270 Sep 22 10:43 power.vue        //开关量开机效率
+-rw-r--r--  1 leonliu  staff   8223 Oct  9 19:47 printEdit.vue    //打印编辑表头、表尾的内容
+-rw-r--r--  1 leonliu  staff   9362 Oct 10 17:24 sensorcall.vue
+-rw-r--r--  1 leonliu  staff  11454 Oct 23 13:58 setting.vue      //系统参数设置，如上传接口配置、系统证书配置等
+-rw-r--r--  1 leonliu  staff   4454 Oct  9 19:47 statechange.vue
+-rw-r--r--  1 leonliu  staff  22292 Oct 25 09:34 station.vue
+-rw-r--r--  1 leonliu  staff  21254 Oct 10 17:24 switchHistoryLine.vue
+-rw-r--r--  1 leonliu  staff  13843 Oct 10 17:24 switchLine.vue
+-rw-r--r--  1 leonliu  staff  51498 Oct 25 09:34 topo.vue        //gis地图公用组件
+-rw-r--r--  1 leonliu  staff   4312 Sep 22 10:43 upload.vue      //底图文件上传，不同系统不同底图
+-rw-r--r--  1 leonliu  staff  19732 Aug 24 01:10 warning.vue
+-rw-r--r--  1 leonliu  staff  20742 Aug 24 01:10 warningtest.vue
+-rw-r--r--  1 leonliu  staff  14225 Oct 22 13:28 webTopo3.vue   //拓扑图展示，实时检验传感器、分站等的状态
+-rw-r--r--  1 leonliu  staff  20833 Oct 24 10:50 wind.vue       //通风系统展示，设备开停传感器对应控制不同风向巷道
+
+./lib:

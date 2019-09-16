@@ -1,0 +1,9 @@
+{
+    "routeToCode": {
+        "auth.authHandler.sendLoginVerifyCode": 4
+    },
+    "codeToRoute": {
+        "1": "auth.authHandler.sendLoginVerifyCode"
+    },
+    "version": "CenZonNdYglXPBEpCCAZyg=="
+}

@@ -1,0 +1,107 @@
+$blue:#2476f1;
+$red:#f8423b;
+$orange:#ffb42b;
+*{box-sizing: border-box;font-style: normal;padding: 0;margin: 0;}
+$imgUrl:'~resources/images/';
+$size-w:4vw;
+$size-s:4.5vw;
+$size-m:5vw;
+$size-l:5.5vw;
+$size-xl:6vw;
+$size-xxl:6.5vw;
+$color-b:#3c5b7d;
+$color-n:#66819e;
+$color-l:#e2e9f3;
+$titleColor:$color-b;
+$valueColor:$color-n;
+
+$border:solid 1px #e5e5e5;
+
+@mixin middle {display: flex;align-items: center;justify-content: center;}
+
+input{outline: none;}
+input::-ms-input-placeholder{font-size: $size-s;color: #bcbcbc;margin: 0 0 0 85px;} 
+input::-webkit-input-placeholder{font-size: $size-s;color: #bcbcbc;margin: 0 0 0 85px;}
+a{color:$blue }
+.btn{border-radius: 10vw;font-size: $size-w;height: 6vh;}
+.cube-btn{background: $blue;}
+.clear{clear: both;}
+
+/*tabbar*/
+@mixin backSize {background-size: 70%;}
+.cube-tab-bar{position: fixed;bottom: 0;width: 100vw;border-top: solid 1px #e5e5e5;z-index: 100;background: #fff}
+.cube-tab dt{width: 12vw;height: 12vw;margin: 0 auto;}
+.cube-tab dd{font-size:12px}
+.cube-tab_active{color:#333!important;}
+.tabbar1 dt{background:url(#{$imgUrl}tabbar1.png) no-repeat center center;@include backSize;}
+.tabbar2 dt{background:url(#{$imgUrl}tabbar2.png) no-repeat center center;@include backSize;}
+.tabbar3 dt{background:url(#{$imgUrl}tabbar3.png) no-repeat center center;@include backSize;}
+.tabbar4 dt{background:url(#{$imgUrl}tabbar4.png) no-repeat center center;@include backSize;}
+.tabbar5 dt{background:url(#{$imgUrl}tabbar5.png) no-repeat center center;@include backSize;}
+.tab1{
+    .tabbar1{
+        color: $blue;
+        dt{background:url(#{$imgUrl}tabbar1-ac.png) no-repeat center center;@include backSize;}
+    }
+    
+}
+.tab2{
+    .tabbar2{
+        color: $blue;
+        dt{background:url(#{$imgUrl}tabbar2-ac.png) no-repeat center center;@include backSize;}
+    }
+    
+}
+.tab3{
+    .tabbar3{
+        color: $blue;
+        // dt{background:url(#{$imgUrl}tabbar3-ac.png) no-repeat center center;@include backSize;}
+    }
+    
+}
+.tab4{
+    .tabbar4{
+        color: $blue;
+        dt{background:url(#{$imgUrl}tabbar4-ac.png) no-repeat center center;@include backSize;}
+    }
+    
+}
+.tab5{
+    .tabbar5{
+        color: $blue;
+        dt{background:url(#{$imgUrl}tabbar5-ac.png) no-repeat center center;@include backSize;}
+    }
+    
+}
+/*tabbar end*/
+
+.header{
+    display: flex;height: 8vh;align-items: center;border-bottom: solid 1px #f0f0f0; background: #fff;
+    .text{font-size: $size-m;flex: 5;text-indent: -8vw;text-align: center;}
+    .back{@include middle;flex: 1;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACsSURBVGhD7dIxCsJAFEXRCda6AnUrAV2Vna219lauJG7DPaRIan0/WAypBd8P98BjmOkuTAGWr/meqR21XjtPt6QiYtTe2ikeMqojrlrK71VH3DQi/mUREQeNCAdEuCDCBREuiHBBhAsiXKy1QYuIu5YyIqy0TouQl7bX0tpoT40YN8S4IsYVMa7mMTstLWJcEeOKGFfEuJrHbLW06phHPGQWMRetnW4AfqyUDx/ucad4uVg9AAAAAElFTkSuQmCC) no-repeat center center;background-size: 7vw;height: 100%;margin-left: 4vw;}
+}
+.settings{
+    .hint{color: $orange;height: 8vh;line-height: 8vh;font-size: $size-s; text-align: center;}
+}
+.formBox{
+    padding: 0 10vw;
+    .formItem{
+        height: 8vh;margin-bottom: 3vh;border-radius: 4vh;border: solid 2px #dcdcdc;display: flex; align-items: center;padding:0 4vw;
+        em{display: flex;flex: 1;display: flex;align-items: center;text-align: left;font-size: $size-w;white-space: nowrap;color: $titleColor;}
+        input{flex: 3;height: 98%;font-size: $size-s;border-radius: 4vh;}
+        &.item3{
+            input{width: 10vw;}
+            .cube-btn{border-radius: 0;height: 100%;}
+            .lineBtn{white-space: nowrap;font-size: $size-w;border-left: solid 2px #e5e5e5;height: 100%;@include middle;padding-left: 4vw;color: $blue;background: none;width: auto;}
+            .cube-btn_disabled{border: none;color: #ccc;outline: none;}
+            .cube-btn_disabled::after{border-top:none;border-bottom: none;border-right: none;}
+        }
+    }
+    .weui-cells:after{border-bottom: none;}
+    .cube-btn{background: $blue;border-radius: 3vh;height: 6vh;font-size: $size-s}
+}
+
+.cube-radio .cube-radio-ui{width: 5vw;height: 5vw;}
+.cube-radio_selected .cube-radio-ui{background-color: $blue!important;}
+
+.content{min-height: 100vh;}

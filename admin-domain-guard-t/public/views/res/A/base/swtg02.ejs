@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=0.45 minimum-scale=0, maximum-scale=0.45, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href=<%=baseUrl+"/images/"+faviconIcon %>>
+    <link rel="stylesheet" href=<%=baseUrl+"/css/base.css"%>>
+    <link rel="stylesheet" href=<%=baseUrl+"/css/swtg02.css"%>>
+    <style>
+       
+    </style>
+</head>
+
+<body class="btnText">
+    <div class="content" style="margin-bottom:3.8rem;">
+        <img class="bg_img" src=<%=baseUrl+"/images/swtg02/bg1_01.jpg" %> alt="">
+        <img class="bg_img" src=<%=baseUrl+"/images/swtg02/bg1_02.jpg" %> alt="">
+        <img class="bg_img" src=<%=baseUrl+"/images/swtg02/bg1_03.jpg" %> alt="">
+        <img class="bg_img" src=<%=baseUrl+"/images/swtg02/bg1_04.jpg" %> alt="">
+        <div class="bg_img">
+            <img class="bg_img" src=<%=baseUrl+"/images/swtg02/bg1_05.jpg" %> alt="">
+            <div class="bg_btn">
+                 <div class="btn"></div>
+                 <div class="btn"></div>
+            </div>
+        </div>
+        
+        <img class="bg_img" src=<%=baseUrl+"/images/swtg02/bg1_06.jpg" %> alt="">
+        <img class="bg_img" src=<%=baseUrl+"/images/swtg02/bg1_07.jpg" %> alt="">
+        <!-- <div class="bg_img">
+            <img class="bg_img" style="margin-top:-1px" src=<%=baseUrl+"/images/swtg01/bg_02.jpg" %> alt="">
+            <div class="bg_btn">
+                <img class="btn" src=<%=baseUrl+"/images/swtg01/iosBtn.png" %> alt="">
+                <img class="btn" src=<%=baseUrl+"/images/swtg01/adrBtn.png" %> alt="">
+            </div>
+        </div> -->
+        <!-- <div class="bg_img">
+            <img class="bg_img" src=<%=baseUrl+"/images/swtg01/bg_03.jpg" %> alt="">
+            <div class="bg_game">
+                <img class="game" src=<%=baseUrl+"/images/swtg01/bg_icon01.png" %> alt="">
+                <img class="game" src=<%=baseUrl+"/images/swtg01/bg_icon02.png" %> alt="">
+                <img class="game" src=<%=baseUrl+"/images/swtg01/bg_icon03.png" %> alt="">
+                <img class="game" src=<%=baseUrl+"/images/swtg01/bg_icon04.png" %> alt="">
+                <img class="game" src=<%=baseUrl+"/images/swtg01/bg_icon05.png" %> alt="">
+                <img class="game" src=<%=baseUrl+"/images/swtg01/bg_icon06.png" %> alt="">
+                <img class="game" src=<%=baseUrl+"/images/swtg01/bg_icon07.png" %> alt="">
+                <img class="game" src=<%=baseUrl+"/images/swtg01/bg_icon08.png" %> alt="">
+            </div>
+        </div> -->
+    </div>
+    <div class="bottomBar" style="background: rgba(255, 255, 255, 0.77);">
+        <div class="inner">
+            <div class="iconBox">
+                <!-- <img src=<%=baseUrl+"/images/"+avatarIcon %> alt=""> -->
+                <img src=<%=baseUrl+"/images/swtg02/logo_icon.png" %> alt="">
+            </div>
+            <dl class="gameInfo gameInfo_swtg02">
+                <h3>凯旋棋牌</h3>
+                <span>百人激情大战</span>
+                <span>万人同场娱乐</span>
+                <!-- <dd style="margin-top:36px;">
+                    <%=baseWord%>
+                </dd> -->
+            </dl>
+            <div class="btnBox">
+                <a class="btnDownload2" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.75);background: linear-gradient(to bottom, #9edb41 0%, #7bb81e 99%);"><%=baseWord%></a>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="/simJQ.js"></script> -->
+    <script src=<%=cdnUrl +  "/simJQ.js" %>></script>
+    <%if(isIOS){%> <%#ios%> <%if(iosIntro){%> <%#引导%> <%include
+    ./components/guide%> <%}%> <%if(!iosUrl.isAppStore){%> <%#企业包%> <%include
+    ./components/qyb%> <%} else{%> <%#商店包%> <%include ./components/store%>
+    <%}%>
+    <!-- <script src="/clipboard.min.js"></script> -->
+    <script src=<%= cdnUrl + "/clipboard.min.js" %>> </script>
+    <script>
+        new ClipboardJS('.btnText', { text: function () { return "<%-channel%>".trim() } });
+        var weixin = <%=isWx%>;
+        var baseUrl = "<%-baseUrl%>";
+        // $(".qrcode").css("display", "none");
+        if (weixin) {
+            //ios微信
+            $("body").append(`<div class="fullImg"><img src="${baseUrl}/images/live_weixin_ios.png"></div>`);
+        }
+    </script>
+    <%}else if(isAdr) {%> <%#安卓%> <%include ./components/android%>
+    <script>
+        var weixin = <%=isWx%>;
+        var baseUrl = "<%-baseUrl%>";
+        //  $(".qrcode").css("display", "none");
+        if (weixin) {
+            //安卓微信
+            $("body").append(`<div class="fullImg"><img src="${baseUrl}/images/live_weixin.png"></div>`)
+        }
+    </script>
+    <%} else {%> <%#其他（pc）%> <%include ./components/android%> <%}%>
+    <script>
+        <% include index.js %>
+            document.registerReady(function () {
+                $(".btnDownload2,.btn,.game").click(function () {
+                    downloadFuc();
+                })
+            })
+    </script>
+    <% include ../../../common/stats/index.ejs %>
+</body>
+
+</html>

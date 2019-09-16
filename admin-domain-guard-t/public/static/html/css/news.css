@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    clear: both;
+    box-sizing: border-box;
+}
+.content{
+    min-width: 750px;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px 10vh 10px;
+}
+.newLogo{
+    display: block;
+    margin: 30px 0;
+    width: 50%;
+    max-width: 300px;
+}
+h1{font-size: 30px;}
+.author{display: block;margin: 20px 0;width: 30%;}
+.strContent{font-size: 16px;line-height: 40px;color: #666;}
+.strContent img{display: block;margin: 20px auto;width: 100%;max-width: 750px;}
+.strContent p{text-indent: 2em;}
+.gameImg{margin-top: 20px;padding-bottom: 20px;}
+h2{font-size: 20px;line-height: 40px;}
+.gameImg img{display: block;max-width: 100%;margin: 0 auto;width: 100%;max-width: 750px;}
+.qrBox{margin: 20px 0;text-align: center}
+.qrBox img{margin: 20px auto;}
+.downLink{font-size: 18px;}
+
+.btnDownload2 {
+    display: block;
+    width: 90%;
+    height: 90px;
+    background: #b93d39;
+    border: none;
+    color: #eef092;
+    font-size: 46px;
+    line-height: 90px;
+    text-align: center;
+    margin: 20px auto;
+    letter-spacing: 0.5vw;
+    border-radius: 10px;
+}
+

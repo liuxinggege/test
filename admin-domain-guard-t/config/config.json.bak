@@ -1,0 +1,8 @@
+{
+    "port": 7878,
+    "dbAdminWebUrl": "mongodb://192.168.1.9:30018,192.168.1.9:30017,192.168.1.9:30019/adminweb?replicaSet=testDb",
+    "logLevel": "debug",
+    "depart": "xingyue",
+    "mixStaticPath": true,
+    "cdnUrl":"http://94xz.fhjinchengwang.com"
+}

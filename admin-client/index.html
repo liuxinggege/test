@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>管理后台</title>
+  </head>
+
+  <body>
+    <audio id="audio" preload="auto">
+      <source src="./static/message.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="app"></div>
+    <!-- tody add -->
+    <!-- built files will be auto injected -->
+    <script>
+      function playVoice() {
+        var audio = document.getElementById("audio");
+        audio.currentTime = 0;
+        audio.pause();
+        audio.play();
+      }
+
+    </script>
+  </body>
+
+</html>

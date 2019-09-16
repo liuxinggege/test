@@ -1,0 +1,393 @@
+{
+    "connector.entryHandler.preEnter": {
+        "required string c": 1
+    },
+    "connector.entryHandler.enter": {
+        "required string token": 1
+    },
+    "lobby.eventHandler.getEventData": {},
+    "lobby.eventHandler.checkEventChannel": {
+        "required int32 actId": 1
+    },
+    "lobby.eventHandler.getCode": {
+        "required int32 actId": 1
+    },
+    "lobby.bankHandler.getVerificationCode": {},
+    "lobby.bankHandler.modifyBankPwd": {
+        "required string verifyCode": 1,
+        "required string pwd": 2
+    },
+    "lobby.bankHandler.saveMoney": {
+        "required string money": 1
+    },
+    "lobby.bankHandler.getMoney": {
+        "required string money": 1
+    },
+    "lobby.bankHandler.enter": {},
+    "lobby.bankHandler.transfer": {
+        "required uInt32 uid": 1,
+        "required string money": 2
+    },
+    "lobby.bankHandler.getTransfers": {
+        "required uInt32 page": 1
+    },
+    "lobby.billHandler.payEnforce": {},
+    "lobby.billHandler.getPayDataByType": {
+        "required string type": 1
+    },
+    "lobby.billHandler.recharge": {
+        "required string billPrice": 1,
+        "required string payType": 2,
+        "required string deviceType": 3,
+        "optional string cardNumber": 4,
+        "optional string cardPwd": 5,
+        "optional string cardMainType": 6,
+        "optional string cardSubType": 7
+    },
+    "lobby.billHandler.withdraw": {
+        "required string money": 1,
+        "required string deviceType": 2,
+        "required string pwd": 3,
+        "required int32 withdrawType": 4,
+        "optional int32 vipId": 5
+    },
+    "lobby.billHandler.getWithdraws": {},
+    "lobby.billHandler.getAgent": {},
+    "lobby.billHandler.bindSSS": {
+        "required string SSSRealName": 1,
+        "required string SSSAccount": 2
+    },
+    "lobby.billHandler.bindBankCard": {
+        "required string bankCardNumber": 1,
+        "required string bankCardRealName": 2,
+        "required string bankOfCreditCard": 3
+    },
+    "lobby.billHandler.purchase": {
+        "required string invoice": 1,
+        "optional string name": 2,
+        "optional string money": 3,
+        "optional string rmb": 4
+    },
+    "lobby.billHandler.checkShowBankOrAliInfo": {},
+    "lobby.billHandler.modifyWithdrawAccount": {
+        "required int32 type": 1,
+        "required string account": 2,
+        "required string name": 3,
+        "optional string creditCard": 4,
+        "required string bankPwd": 5
+    },
+    "lobby.billHandler.getIAPInfo": {
+        "required string boundID": 1
+    },
+    "lobby.billHandler.getVipData": {
+        "required int32 page": 1
+    },
+    "lobby.billHandler.withdrawEnforce": {},
+    "lobby.kfHandler.getFaq": {},
+    "lobby.kfHandler.putIn": {
+        "required string content": 1,
+        "required int32 type": 2
+    },
+    "lobby.kfHandler.setRead": {
+        "required string id": 1
+    },
+    "lobby.kfHandler.getQuestions": {
+        "required string page": 1
+    },
+    "lobby.kfHandler.setComment": {
+        "required string id": 1,
+        "required int32 comment": 2
+    },
+    "lobby.lobbyHandler.enter": {},
+    "lobby.lobbyHandler.getBillboard": {
+        "required int32 idx": 1
+    },
+    "lobby.lobbyHandler.leaveGame": {},
+    "lobby.lobbyHandler.getAdvertisements": {},
+    "lobby.lobbyHandler.enterGame": {},
+    "lobby.lobbyHandler.getGameList": {},
+    "lobby.lobbyHandler.getNewbieBonus": {},
+    "lobby.lobbyHandler.getDownloadBonus": {},
+    "lobby.lobbyHandler.getPerDayWelfare": {},
+    "lobby.lobbyHandler.getWeb": {},
+    "lobby.lobbyHandler.bind": {
+        "required string phone": 1,
+        "required string code": 2,
+        "required string pwd": 3
+    },
+    "lobby.lobbyHandler.getChangePwdVerifyCode": {},
+    "lobby.lobbyHandler.changePwd": {
+        "required string code": 1,
+        "required string pwd": 2
+    },
+    "lobby.lobbyHandler.getBindVerifyCode": {
+        "required string phone": 1
+    },
+    "lobby.mailHandler.getMails": {
+        "required uInt32 page": 1
+    },
+    "lobby.mailHandler.checkNew": {},
+    "lobby.mailHandler.read": {
+        "required string id": 1
+    },
+    "lobby.mailHandler.delete": {
+        "repeated string ids": 1
+    },
+    "lobby.matchHandler.getMatchList": {
+        "required string gid": 1
+    },
+    "lobby.matchHandler.join": {
+        "required string gid": 1,
+        "required string mid": 2
+    },
+    "lobby.matchHandler.queryJoin": {
+        "required string gid": 1,
+        "required string mid": 2
+    },
+    "lobby.matchHandler.changeRoom": {},
+    "lobby.userHandler.changeName": {
+        "required string name": 1
+    },
+    "lobby.userHandler.changeGender": {
+        "required int32 gender": 1
+    },
+    "lobby.userHandler.changeAvatar": {
+        "required uInt32 avatar": 1
+    },
+    "lobby.userHandler.getDictionary": {},
+    "game.roomHandler.startGame": {},
+    "game.roomHandler.vote": {
+        "required int32 bAgree": 1
+    },
+    "game.BRNNHandler.doBank": {},
+    "game.BRNNHandler.doBet": {
+        "required int32 areaPos": 1,
+        "required string betPoint": 2
+    },
+    "game.BRNNHandler.loadGameInfo": {},
+    "game.BRNNHandler.gamerHistory": {},
+    "game.BRNNHandler.gameHistory": {},
+    "game.BRNNHandler.getUserMaxAllow": {
+        "required int32 uid": 1
+    },
+    "game.BRNNHandler.bankList": {},
+    "game.BRNNHandler.needShowUserInfo": {
+        "repeated int32 userPosList": 1
+    },
+    "game.BRNNHandler.exitBank": {},
+    "game.NNHandler.doBank": {
+        "required int32 bankPoint": 1
+    },
+    "game.NNHandler.doBet": {
+        "required int32 betPoint": 1
+    },
+    "game.NNHandler.doResult": {},
+    "game.NNHandler.loadGameInfo": {},
+    "game.JDNNHandler.doBank": {
+        "required int32 bankPoint": 1
+    },
+    "game.JDNNHandler.doBet": {
+        "required int32 betPoint": 1
+    },
+    "game.JDNNHandler.doResult": {},
+    "game.JDNNHandler.loadGameInfo": {},
+    "game.JHHandler.doBet": {
+        "required int32 round": 1,
+        "required int32 betIndex": 2
+    },
+    "game.JHHandler.faceUp": {
+        "required int32 round": 1
+    },
+    "game.JHHandler.challenge": {
+        "required int32 round": 1,
+        "required int32 rPos": 2
+    },
+    "game.JHHandler.allIn": {
+        "required int32 round": 1
+    },
+    "game.JHHandler.discard": {
+        "required int32 round": 1
+    },
+    "game.JHHandler.showCards": {},
+    "game.JHHandler.loadGameInfo": {},
+    "game.SHHandler.discard": {
+        "required int32 round": 1
+    },
+    "game.SHHandler.doBet": {
+        "required int32 round": 1,
+        "required string bets": 2
+    },
+    "game.SHHandler.selectFaceUp": {
+        "required int32 round": 1,
+        "required int32 idx": 2
+    },
+    "game.SHHandler.loadGameInfo": {},
+    "game.XZHandler.select3Pai": {
+        "repeated int32 pais": 1
+    },
+    "game.XZHandler.userDingQue": {
+        "required int32 queType": 1
+    },
+    "game.XZHandler.userOutPai": {
+        "required int32 pai": 1
+    },
+    "game.XZHandler.userPeng": {},
+    "game.XZHandler.userGang": {
+        "required int32 pai": 1
+    },
+    "game.XZHandler.userHu": {},
+    "game.XZHandler.userPass": {},
+    "auth.authHandler.sendLoginVerifyCode": {
+        "required string phone": 1,
+        "required string pid": 2
+    },
+    "game.DZZHandler.JiaoFen": {
+        "required uInt32 point": 1
+    },
+    "game.DZZHandler.addMulti": {
+        "required uInt32 add": 1
+    },
+    "game.DZZHandler.playCards": {
+        "repeated uInt32 cards": 1,
+        "required uInt32 shape": 2
+    },
+    "game.DZZHandler.NotPlay": {},
+    "game.DZZHandler.loadCurrentGameInfo": {},
+    "game.HHHandler.doBets": {
+        "required uInt32 area": 1,
+        "required uInt32 bets": 2
+    },
+    "game.DZZHandler.hostedChg": {},
+    "game.HHHandler.loadGameInfo": {},
+    "game.HHHandler.needShowUserInfo": {
+        "repeated int32 userPosList": 1
+    },
+    "game.LHHandler.doBets": {
+        "required uInt32 area": 1,
+        "required uInt32 bets": 2
+    },
+    "game.LHHandler.loadGameInfo": {},
+    "game.LHHandler.needShowUserInfo": {
+        "repeated int32 userPosList": 1
+    },
+    "game.BYHandler.fire": {
+        "required int32 fireInfo": 1
+    },
+    "game.BYHandler.hit": {
+        "required int32 hitInfo": 1
+    },
+    "game.BYHandler.automatic": {
+        "optional float angle": 1,
+        "required int32 on": 2
+    },
+    "game.BYHandler.bulletRatio": {
+        "required int32 ratio": 1
+    },
+    "game.BYHandler.lock": {
+        "optional int32 fishId": 1,
+        "optional int32 massId": 2,
+        "required int32 on": 3
+    },
+    "game.BYHandler.bulletStyle": {
+        "required int32 bulletStyle": 1
+    },
+    "game.BYHandler.robotFishInfo": {
+        "message FishInfo": {
+            "required int32 fishId": 1,
+            "optional int32 massId": 2
+        },
+        "repeated FishInfo fishInfo": 1
+    },
+    "game.BYHandler.loadGameInfo": {},
+    "game.PDKHandler.userPlay": {
+        "repeated int32 cards": 1
+    },
+    "game.PDKHandler.notPlay": {},
+    "game.PDKHandler.loadGameInfo": {},
+    "game.PDKHandler.userAuto": {},
+    "game.ERMJHandler.userOutPai": {
+        "required int32 pai": 1,
+        "required int32 tingPai": 2
+    },
+    "game.ERMJHandler.userChi": {
+        "required int32 pai": 1
+    },
+    "game.ERMJHandler.userPeng": {},
+    "game.ERMJHandler.userGang": {
+        "required int32 pai": 1
+    },
+    "game.ERMJHandler.userHu": {},
+    "game.ERMJHandler.userPass": {},
+    "game.ERMJHandler.loadGameInfo": {},
+
+    "chat.clientHandler.orderTrack":{
+        "required int32 page": 1
+    },
+
+    "chat.clientHandler.orderInfo":{
+        "required string _id": 1
+    },
+    "chat.clientHandler.getCommonAgent":{
+    },
+    "chat.clientHandler.delAgent":{
+        "required int32 aUid": 1
+    },
+    "chat.clientHandler.addAgent":{
+        "required int32 aUid": 1
+    },
+    "chat.clientHandler.recharge":{
+        "required int32 aUid": 1,
+        "required int32 gold": 2
+    },
+    "chat.clientHandler.sendMsg":{
+        "required string _id": 1,
+        "required int32 aUid": 2,
+        "required int32 msgType": 3,
+        "required string content": 4,
+        "required string img": 5,
+        "optional string rcgType": 6
+    },
+    "chat.clientHandler.clientMsgIsRead":{
+        "required string _id": 1,
+        "required int32 aUid": 2
+    },
+    "chat.clientHandler.updateEvaluation":{
+        "required string _id": 1,
+        "required int32 aUid": 2,
+        "required int32 evaluation": 3
+    },
+    "chat.clientHandler.report":{
+        "required string _id": 1
+    },
+    "chat.clientHandler.openRecharge":{
+    },
+    "connector.entryHandler.agentEnter": {
+        "required string token": 1
+    },
+    "chat.agentHandler.enter":{
+        "required int32 uid": 1
+    },
+    "chat.agentHandler.leave":{
+        "required int32 uid": 1
+    },
+    "chat.agentHandler.updateState":{
+        "required int32 uid": 1,
+        "required int32 state": 2
+    },
+    "chat.agentHandler.sendMsgToUser":{
+        "required int32 uid": 1,
+        "required int32 toUid": 2,
+        "required string chatId": 3,
+        "message Msg": {
+            "required int32 msgType": 1,
+            "optional string content": 2,
+            "optional string img": 3,
+            "message Rcgs": {
+                "required string recType": 1,
+                "required string recStr": 2
+            },
+            "repeated Rcgs rcgTypes": 4
+        },
+        "required Msg msgData": 4
+    }
+}

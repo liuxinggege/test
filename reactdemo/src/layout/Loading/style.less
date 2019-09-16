@@ -1,0 +1,49 @@
+// time = 1000ms;
+// count = 10;
+
+.message-loading {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    .line {
+        height: 50%;
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 4px;
+        margin-top: -2px;
+        transform-origin: left center;
+        animation: message-loading-fade time infinite linear;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 0;
+            height: 100%;
+            border-radius: 4px;
+            background: #919399;
+        }
+    }
+
+    // for i in range(1, count) {
+    //     .line:nth-child({i}) {
+    //         transform: rotate((i - 1) * (360deg / count));
+    //         animation-delay: (i - 1) * (time / count);
+    //     }
+    // }
+}
+
+@keyframes message-loading-fade {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

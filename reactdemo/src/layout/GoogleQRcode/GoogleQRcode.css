@@ -1,0 +1,47 @@
+
+#GoogleQRcode{
+    background: #2d3a4b;
+    height: 100vh;
+    position: relative;
+}
+
+.QRcodeBox{
+    width: 360px;
+    height: 430px;
+    background: rgba(197, 208, 224, 0.1);
+    border-radius: 6px;
+    position: absolute;
+    top:150px;
+    left:50%;
+    margin-left: -180px;
+}
+
+#GoogleQRcode .QRcodeBox .QRcode{
+    position: relative;
+    top:100px;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+#GoogleQRcode .content {
+    width: 100%;
+    height: 240px;
+    /* border:1px solid red; */
+    margin-top: 60px;
+    text-align: center;
+}
+#GoogleQRcode .content h4{
+    color:white;
+    margin-top: 20px;
+}
+#GoogleQRcode .ant-input-affix-wrapper-lg{
+    margin-left: 8%;
+    margin-bottom: 20px;
+    width: 100%;
+   
+  
+}
+ 
+#GoogleQRcode  .ant-input{
+    width: 85%;
+  
+}

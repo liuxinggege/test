@@ -1,0 +1,60 @@
+body {
+    background: rgba(38, 17, 109);
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    background: yellow;
+}
+
+.bj_head,
+.bj_footer {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+.bj_head {
+    z-index: 1;
+}
+.iostss {
+    position: fixed;
+    display: block;
+    opacity: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 26pt;
+    color: #000;
+}
+.btn,
+.game {
+    position: absolute;
+    bottom: 16rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.game {
+    width: 92%;
+    flex-wrap: wrap;
+    bottom: -10.6rem;
+}
+
+.game img {
+    width: 10rem;
+}
+
+.bottomBar {
+    z-index: 9;
+}

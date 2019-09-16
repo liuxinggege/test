@@ -1,0 +1,72 @@
+body {
+    background: #fff;
+}
+
+.computer {
+    background: url("../images/defaultAndPC/bg.jpg");
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+#banner{
+    position: absolute;
+    margin: 0 auto;
+    width: 27vw;
+    height: 29.5vh;
+    bottom:30.6vh;
+    left: 3.8vw;
+}
+#banner ul{
+        width: 27vw;
+        height: 29.5vh;
+        overflow: hidden;
+}
+#banner li{
+        display: block;
+}
+#banner li>img{
+    width: 27vw;
+    height: 29.5vh;
+}
+.iostss {
+    position: fixed;
+    display: block;
+    opacity: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 26pt;
+    color: #000;
+}
+#banner .b-btn{
+        display: inline-block;
+        height: 2.5vw;
+        width: 9vh;
+        color: #8B7B8B;
+        opacity: 0.7;
+        /*防止双击的时候出现蓝底*/
+        -webkit-user-select:none; 
+        -moz-user-select:none; 
+        -ms-user-select:none; 
+        user-select:none;
+}
+#banner .b-btn:hover{
+                /* background: #cdc1c5;
+                color: #f8f8ff; */
+                opacity: 1;
+                cursor: pointer;
+}
+#banner .right{
+    position: absolute;
+    bottom:-8vh;
+    right: 7vw;
+}
+#banner .left{
+    position: absolute;
+    bottom:-8vh;
+    left: 7vw;
+    -webkit-transform:rotate(180deg); 
+}

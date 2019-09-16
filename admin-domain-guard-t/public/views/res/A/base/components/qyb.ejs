@@ -1,0 +1,16 @@
+<div class="qyBanner" id="qyBanner">
+  <div class="img"><img src=<%=baseUrl+"/images/qy1.png"%> alt=""></div>
+  <div class="img"><img src=<%=baseUrl+"/images/qy2.png"%> alt=""></div>
+  <div class="img"><img src=<%=baseUrl+"/images/qy3.png"%> alt=""></div>
+  <div class="img"><img src=<%=baseUrl+"/images/qy4.jpg"%> alt=""></div>
+  <div class="img"><img src=<%=baseUrl+"/images/qy5.png"%> alt=""></div>
+</div>
+<script>
+  function downloadFuc() {
+    $("#qyBanner").css("display", "block");
+    window.location.href = "<%- iosUrl.url %>";
+  }
+  $("#qyBanner").click(function() {
+    $(this).css("display", "none");
+  });
+</script>

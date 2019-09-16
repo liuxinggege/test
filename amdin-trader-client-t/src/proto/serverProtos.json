@@ -1,0 +1,1848 @@
+{
+    "connector.entryHandler.preEnter": {
+        "required uInt32 code": 1,
+        "optional string s": 2
+    },
+    "connector.entryHandler.enter": {
+        "required uInt32 code": 1,
+        "optional string token": 2
+    },
+    "lobby.bankHandler.getVerificationCode": {
+        "required uInt32 code": 1
+    },
+    "lobby.bankHandler.modifyBankPwd": {
+        "required uInt32 code": 1
+    },
+    "saveMoneyNotify": {
+        "required uInt32 code": 1,
+        "optional string money": 2,
+        "optional string bankMoney": 3
+    },
+    "getMoneyNotify": {
+        "required uInt32 code": 1,
+        "optional string money": 2,
+        "optional string bankMoney": 3
+    },
+    "lobby.bankHandler.enter": {
+        "required uInt32 code": 1,
+        "optional string money": 2,
+        "optional string bankMoney": 3
+    },
+    "lobby.billHandler.getWithdrawAgents": {
+        "message Agent": {
+            "optional string name": 2,
+            "optional string qq": 3,
+            "optional string wx": 4,
+            "optional int32 hot": 5
+        },
+        "repeated Agent agents": 1
+    },
+    "lobby.bankHandler.transfer": {
+        "required uInt32 code": 1
+    },
+    "transferNotify": {
+        "required uInt32 code": 1,
+        "optional string money": 2,
+        "optional string bankMoney": 3
+    },
+    "lobby.bankHandler.getTransfers": {
+        "required uInt32 code": 1,
+        "message Transfer": {
+            "required uInt32 from": 1,
+            "required uInt32 to": 2,
+            "required string amount": 3,
+            "required int32 dateTime": 4,
+            "required int32 bRead": 5
+        },
+        "repeated Transfer transfers": 2
+    },
+    "lobby.billHandler.getVipData": {
+        "required uInt32 code": 1,
+        "message VipInfo": {
+            "required uInt32 vipUid": 1,
+            "required uInt32 uid": 2,
+            "required string money": 3,
+            "required int32 dateTime": 4,
+            "required int32 state": 5,
+            "required int32 status": 6,
+            "required string orderId": 7
+        },
+        "repeated VipInfo vipInfo": 2
+    },
+    "lobby.billHandler.payEnforce": {
+        "required uInt32 code": 1,
+        "optional uInt32 payEnforce": 2,
+        "message Types":{
+            "optional int32 idx": 1,
+            "optional string type": 2
+        },
+        "repeated Types payTypes": 3,
+        "optional uInt32 onlineRechargeOKTimes": 4,
+        "optional string onlineRecharge": 5,
+        "optional uInt32 agentOKTimes": 6,
+        "message RechargeEnforce": {
+            "required int32 srTimesLLmit": 1,
+            "required string srTotalLLimit": 2,
+            "required string srOnlyShowAgentRate": 3,
+            "required int32 srConNoBillTimes": 4,
+            "required string srDecRate": 5,
+            "required string saOnlyShowAgentRate": 6,
+            "required int32 saConNoBillTimes": 7,
+            "required string saDecRate": 8,
+            "required string perACIncRate": 9,
+            "required int32 limitOtherChannelMaxMoney": 10,
+            "required string otherChannelMaxMoney": 11
+        },
+        "optional RechargeEnforce re": 7,
+        "message LocationRechargeRule": {
+            "required int32 rechargeOnline": 1,
+            "required int32 rechargePerson": 2,
+            "required int32 rechargeAgent": 3
+        },
+        "optional LocationRechargeRule locationRule": 8,
+        "optional int32 banVip": 9,
+        "optional int32 newAgentSwitch": 10
+    },
+    "lobby.billHandler.getPayDataByType": {
+        "required int32 code": 1,
+        "optional string minMoney": 2,
+        "optional string maxMoney": 3,
+        "repeated int32 moneyRange": 4,
+        "optional string extra": 5
+    },
+    "lobby.billHandler.checkShowBankOrAliInfo": {
+        "required int32 sss": 1,
+        "required int32 uuu": 2
+    },
+    "lobby.billHandler.setWithdrawAccount": {
+        "required int32 code": 1
+    },
+    "lobby.billHandler.recharge": {
+        "required uInt32 code": 1,
+        "optional string url": 2,
+        "optional uInt32 errorCode": 3
+    },
+    "lobby.billHandler.withdraw": {
+        "required uInt32 code": 1,
+        "optional string userMoney": 2
+    },
+    "lobby.billHandler.getAgent": {
+        "required uInt32 code": 1,
+        "message Agent": {
+            "required string name": 1,
+            "optional string qq": 2,
+            "optional string wx": 3,
+            "optional int32 hot": 4
+        },
+        "repeated Agent agents": 2
+    },
+    "lobby.billHandler.getWithdraws": {
+        "message Order": {
+            "required string money": 1,
+            "required int32 createTime": 2,
+            "required int32 state": 3,
+            "required string amount": 4,
+            "required int32 type": 5,
+            "required uInt32 status": 6,
+            "optional string SSSAccount": 7,
+            "optional string SSSRealName": 8,
+            "optional string bankCardNumber": 9,
+            "optional string bankCardRealName": 10
+        },
+        "required uInt32 code": 1,
+        "repeated Order orders": 2
+    },
+    "lobby.lobbyHandler.getPopularize": {
+        "required int32 code": 1,
+        "repeated string wxs": 2
+    },
+    "lobby.billHandler.bindSSS": {
+        "required uInt32 code": 1
+    },
+    "lobby.billHandler.purchase": {
+        "required uInt32 code": 1
+    },
+    "lobby.billHandler.getIAPInfo": {
+        "required uInt32 code": 1,
+        "message Product": {
+            "required string id": 1,
+            "required int32 money": 2,
+            "required int32 price": 3
+        },
+        "repeated Product product": 2
+    },
+    "lobby.billHandler.getBankCardInfo": {
+        "required uInt32 code": 1,
+        "optional string info": 2
+    },
+    "message Where": {
+        "optional string gid": 1,
+        "optional string mid": 2,
+        "optional int32 rType": 3
+    },
+    "message User": {
+        "optional uInt32 uid": 1,
+        "optional string name": 2,
+        "optional int32 avatar": 3,
+        "optional int32 gender": 4,
+        "optional int32 pos": 5,
+        "optional string location": 6,
+        "optional int32 bReady": 7,
+        "optional int32 score": 8,
+        "optional string money": 9,
+        "optional string SSSAccount": 10,
+        "optional int32 vip": 11,
+        "optional string act": 12,
+        "optional string bankCardNumber": 13,
+        "optional string channel": 14,
+        "optional int32 modifyChannel": 15,
+        "optional string takeMoney": 16
+    },
+    "message Vote": {
+        "required int32 leftTime": 1,
+        "message VoteStatus": {
+            "required int32 rpos": 1,
+            "required int32 status": 2
+        },
+        "repeated VoteStatus voteStatus": 2,
+        "required int32 voteHostRPos": 3
+    },
+    "game.roomHandler.getRoomData": {
+        "required int32 code": 1,
+        "repeated User users": 2,
+        "optional int32 leftTime": 3,
+        "optional int32 isGaming": 4,
+        "optional int32 gameLeftTime": 6,
+        "optional Vote vote": 7,
+        "optional string bets": 8,
+        "optional int32 rType": 9,
+        "optional int32 rid": 10,
+        "optional string gid": 11,
+        "optional int32 hostRPos": 12,
+        "optional string config": 13,
+        "optional int32 rPos": 14,
+        "optional int32 startKickTime": 15,
+        "optional int32 maxUserCount": 16,
+        "optional string gameNo": 17
+    },
+    "lobby.kfHandler.getFaq": {
+        "required uInt32 code": 1,
+        "message Faq": {
+            "required string question": 1,
+            "required string answer": 2
+        },
+        "repeated Faq faq": 2
+    },
+    "lobby.eventHandler.getEventData": {
+        "required int32 code": 1,
+        "message Info": {
+            "required int32 actId": 1,
+            "required string name": 2,
+            "required int32 idx": 3
+        },
+        "repeated Info result": 2
+    },
+    "lobby.eventHandler.checkEventChannel": {
+        "required int32 code": 1,
+        "optional int32 st": 2,
+        "optional int32 ed": 3,
+        "message Info": {
+            "optional string recharge": 1,
+            "optional string chgMoney": 2
+        },
+        "optional Info cfgCondition": 4,
+        "optional Info curCondition": 5,
+        "optional int32 get": 6
+    },
+    "lobby.eventHandler.getCode": {
+        "required uInt32 code": 1
+    },
+    "lobby.kfHandler.putIn": {
+        "required uInt32 code": 1
+    },
+    "lobby.kfHandler.setRead": {
+        "required uInt32 code": 1,
+        "message Question": {
+            "required int32 questionTime": 1,
+            "required string question": 2,
+            "optional int32 answerTime": 3,
+            "optional string answer": 4,
+            "optional int32 comment": 5
+        },
+        "optional Question question": 2
+    },
+    "lobby.kfHandler.getQuestions": {
+        "required uInt32 code": 1,
+        "message Question": {
+            "required string id": 1,
+            "required int32 questionTime": 2,
+            "optional int32 answerTime": 3,
+            "optional int32 comment": 4,
+            "optional int32 read": 5
+        },
+        "repeated Question questions": 2
+    },
+    "lobby.kfHandler.setComment": {
+        "required uInt32 code": 1
+    },
+    "lobby.lobbyHandler.getIpList": {
+        "required uInt32 code": 1,
+        "repeated string ips": 2
+    },
+    "lobby.lobbyHandler.enter": {
+        "required uInt32 code": 1,
+        "optional User user": 2,
+        "message Bonus": {
+            "optional string money": 1
+        },
+        "optional Bonus newbieBonus": 3,
+        "optional Where where": 4,
+        "optional int32 withdrawSwitch": 5,
+        "optional int32 rechargeSwitch": 6,
+        "optional int32 channelStatus": 7,
+        "message Report": {
+            "optional int32 switchReport": 1,
+            "optional string reportBonus": 2,
+            "optional string reportWx": 3
+        },
+        "optional Report report": 11,
+        "optional int32 userFlag": 12,
+        "optional Bonus bindBonus": 13,
+        "message Game": {
+            "required string gid": 1,
+            "required uInt32 idx": 2,
+            "required int32 active": 3
+        },
+        "repeated Game games": 14,
+        "repeated string ips": 15
+    },
+    "lobby.billHandler.withdrawEnforce": {
+        "required uInt32 code": 1,
+        "optional int32 SSS": 2,
+        "optional int32 bankCard": 3,
+        "optional int32 agent": 4,
+        "message LocationWithdrawRule": {
+            "required int32 withdrawA": 1,
+            "required int32 withdrawB": 2
+        },
+        "optional LocationWithdrawRule rule": 5,
+        "optional string sssMinMoney": 6,
+        "optional string sssMaxMoney": 7,
+        "optional string bankCardMinMoney": 8,
+        "optional string bankCardMaxMoney": 9,
+        "optional int32 vip": 10,
+        "optional string vipMinMoney": 11,
+        "optional string vipMaxMoney": 12
+    },
+    "lobby.lobbyHandler.getWeb": {
+        "required uInt32 code": 1,
+        "optional string web": 2,
+        "optional string qq": 3,
+        "optional string wx": 4
+    },
+    "lobby.lobbyHandler.getAdvertisements": {
+        "required uInt32 code": 1,
+        "repeated string advertisements": 2
+    },
+    "lobby.lobbyHandler.getBillboard": {
+        "message Billboard": {
+            "required int32 idx": 1,
+            "required string title": 2,
+            "required string subTitle": 3,
+            "required string content": 4
+        },
+        "required uInt32 code": 1,
+        "optional Billboard billboard": 2
+    },
+    "lobby.lobbyHandler.getBillboardTitle": {
+        "message BillboardTitle": {
+            "required int32 idx": 1,
+            "required string title": 2
+        },
+        "required uInt32 code": 1,
+        "repeated BillboardTitle titles": 2
+    },
+    "lobby.lobbyHandler.enterGame": {
+        "required uInt32 code": 1
+    },
+    "lobby.lobbyHandler.getChangePwdVerifyCode": {
+        "required uInt32 code": 1
+    },
+    "lobby.lobbyHandler.changePwd": {
+        "required uInt32 code": 1
+    },
+    "lobby.lobbyHandler.getNewbieBonus": {
+        "required uInt32 code": 1,
+        "optional string money": 2
+    },
+    "lobby.lobbyHandler.getBindVerifyCode": {
+        "required uInt32 code": 1
+    },
+    "lobby.lobbyHandler.bind": {
+        "required int32 code": 1,
+        "optional string act": 2,
+        "optional string bindBonus": 3,
+        "optional string money": 4
+    },
+    "lobby.lobbyHandler.getPerDayWelfare": {
+        "required int32 code": 1
+    },
+    "lobby.mailHandler.getMails": {
+        "required uInt32 code": 1,
+        "message Mail": {
+            "required string _id": 1,
+            "required string from": 2,
+            "required string content": 3,
+            "required uInt32 sendTime": 4,
+            "required int32 bRead": 5
+        },
+        "repeated Mail mails": 2
+    },
+    "lobby.mailHandler.checkNew": {
+        "required uInt32 code": 1,
+        "optional int32 hasNew": 2
+    },
+    "lobby.mailHandler.delete": {
+        "required uInt32 code": 1
+    },
+    "lobby.matchHandler.getMatchList": {
+        "required uInt32 code": 1,
+        "message Match": {
+            "required string id": 1,
+            "required int32 idx": 2,
+            "required int32 color": 3,
+            "required string bets": 4,
+            "required string minMoney": 5,
+            "required string maxMoney": 6,
+            "optional int32 jokerAs": 7,
+            "optional int32 hasJoker": 8,
+            "optional int32 hasMagic": 9,
+            "optional int32 change3Pai": 10,
+            "optional string allInMaxMoney": 11,
+            "optional int32 fanMaxLimit": 12,
+            "optional int32 brnnMaxBoost": 13,
+            "optional int32 byRatio": 14,
+            "optional int32 maxBet": 15,
+            "optional string takeMoney": 16
+        },
+        "repeated Match matches": 2
+    },
+    "lobby.matchHandler.join": {
+        "required uInt32 code": 1,
+        "optional Where where": 2
+    },
+    "lobby.matchHandler.changeRoom": {
+        "required uInt32 code": 1
+    },
+    "lobby.userHandler.changeName": {
+        "required uInt32 code": 1
+    },
+    "lobby.userHandler.getDictionary": {
+        "required uInt32 code": 1,
+        "repeated string dictionary": 2
+    },
+    "globalNotice": {
+        "required int32 level": 1,
+        "required string content": 2
+    },
+    "recharge": {
+        "required string money": 1
+    },
+    "hasNewTransfer": {},
+    "hasNewMail": {},
+    "bankMoney": {
+        "required string bankMoney": 1
+    },
+    "gameEnd": {
+        "optional int32 startKickTime": 1
+    },
+    "gameOver": {},
+    "vote": {
+        "required int32 rPos": 1,
+        "required int32 bAgree": 2
+    },
+    "startVote": {
+        "required int32 leftTime": 1,
+        "required int32 voteHostRPos": 2
+    },
+    "userleave": {
+        "required int32 rPos": 1,
+        "optional int32 reason": 2
+    },
+    "userRecome": {
+        "required User user": 1
+    },
+    "userLost": {
+        "required int32 rPos": 1
+    },
+    "userEnter": {
+        "required User user": 1
+    },
+    "startTimer": {
+        "required int32 timerSecond": 1
+    },
+    "startFreeTick": {
+        "required int32 leftTime": 1
+    },
+    "startGame": {
+        "repeated User users": 1,
+        "optional int32 willChangeRoom": 2,
+        "optional string gameNo": 3
+    },
+    "stopStartTimer": {
+        "required int32 reason": 1
+    },
+    "userReady": {
+        "required int32 rPos": 1
+    },
+    "changeHost": {
+        "required int32 rPos": 1
+    },
+    "userMoney": {
+        "required string money": 1
+    },
+    "stopKickTimer": {},
+    "updateUserLocation": {
+        "required int32 rPos": 1,
+        "required string location": 2
+    },
+    "updateOwnLocation": {
+        "required string location": 1
+    },
+    "game.roomHandler.userChat": {
+        "required string msg": 1,
+        "required int32 rPos": 2
+    },
+    "nnGamePhaseChange": {
+        "required int32 state": 1,
+        "required int32 timer": 2
+    },
+    "nnNotifyGamerInfos": {
+        "repeated uInt32 gamerRPos": 1
+    },
+    "nnDealCards": {
+        "repeated uInt32 cardRunes": 1
+    },
+    "nnDoBankBroadcast": {
+        "required int32 rPos": 1,
+        "required int32 bankPoint": 2
+    },
+    "nnAppointBanker": {
+        "message BankInfo": {
+            "required int32 rPos": 1,
+            "required int32 bankPoint": 2,
+            "required int32 job": 3
+        },
+        "repeated BankInfo gamers": 1,
+        "required int32 bankerPoint": 2
+    },
+    "nnDoBetBroadcast": {
+        "required int32 rPos": 1,
+        "required int32 betPoint": 2
+    },
+    "nnBroadcastAllBetInfos": {
+        "message Info": {
+            "required int32 rPos": 1,
+            "required int32 betPoint": 2
+        },
+        "repeated Info betInfos": 1
+    },
+    "nnDoHandoutBroadcast": {
+        "required int32 rPos": 1,
+        "required int32 bullType": 2,
+        "repeated Rune cardRunes": 3
+    },
+    "message Rune": {
+        "required int32 rune": 1,
+        "optional int32 pretendRune": 2
+    },
+    "nnDoResultBroadcast": {
+        "message Info": {
+            "required int32 rPos": 1,
+            "required int32 job": 2,
+            "required int32 bankPoint": 3,
+            "required int32 betPoint": 4,
+            "required int32 bullType": 5,
+            "required string earned": 6,
+            "required string tax": 7,
+            "repeated Rune cardRunes": 8,
+            "required string score": 9,
+            "required string money": 10
+        },
+        "repeated Info result": 1,
+        "required int32 bankerPoint": 2
+    },
+    "nnNotifyCurrentGameInfo": {
+        "message Info": {
+            "required int32 rPos": 1,
+            "required int32 job": 2,
+            "required int32 bankPoint": 3,
+            "required int32 betPoint": 4,
+            "required int32 isHandouted": 5,
+            "optional int32 bullType": 6,
+            "repeated Rune cardRunes": 7
+        },
+        "required int32 state": 1,
+        "required int32 timer": 2,
+        "required int32 bankerPoint": 3,
+        "repeated Info gamerInfo": 4
+    },
+    "jdnnGamePhaseChange": {
+        "required int32 state": 1,
+        "required int32 timer": 2
+    },
+    "jdnnNotifyGamerInfos": {
+        "repeated uInt32 gamerRPos": 1
+    },
+    "jdnnDealCards": {
+        "repeated uInt32 cardRunes": 1
+    },
+    "jdnnDoBankBroadcast": {
+        "required int32 rPos": 1,
+        "required int32 bankPoint": 2
+    },
+    "jdnnAppointBanker": {
+        "message BankInfo": {
+            "required int32 rPos": 1,
+            "required int32 bankPoint": 2,
+            "required int32 job": 3
+        },
+        "repeated BankInfo gamers": 1,
+        "required int32 bankerPoint": 2
+    },
+    "jdnnDoBetBroadcast": {
+        "required int32 rPos": 1,
+        "required int32 betPoint": 2
+    },
+    "jdnnBroadcastAllBetInfos": {
+        "message Info": {
+            "required int32 rPos": 1,
+            "required int32 betPoint": 2
+        },
+        "repeated Info betInfos": 1
+    },
+    "jdnnDoHandoutBroadcast": {
+        "required int32 rPos": 1,
+        "required int32 bullType": 2,
+        "repeated Rune cardRunes": 3
+    },
+    "jdnnDoResultBroadcast": {
+        "message Info": {
+            "required int32 rPos": 1,
+            "required int32 job": 2,
+            "required int32 bankPoint": 3,
+            "required int32 betPoint": 4,
+            "required int32 bullType": 5,
+            "required string earned": 6,
+            "required string tax": 7,
+            "repeated Rune cardRunes": 8,
+            "required string score": 9,
+            "required string money": 10
+        },
+        "repeated Info result": 1,
+        "required int32 bankerPoint": 2
+    },
+    "jdnnNotifyCurrentGameInfo": {
+        "message Info": {
+            "required int32 rPos": 1,
+            "required int32 job": 2,
+            "required int32 bankPoint": 3,
+            "required int32 betPoint": 4,
+            "required int32 isHandouted": 5,
+            "optional int32 bullType": 6,
+            "repeated Rune cardRunes": 7
+        },
+        "required int32 state": 1,
+        "required int32 timer": 2,
+        "required int32 bankerPoint": 3,
+        "repeated Info gamerInfo": 4
+    },
+    "message BnRune": {
+        "required int32 rune": 1,
+        "optional int32 pretendRune": 2
+    },
+    "brnnGameHistory": {
+        "message gameAroundHis": {
+            "required int32 EAST": 1,
+            "required int32 WEST": 2,
+            "required int32 NORTH": 3,
+            "required int32 SOUTH": 4
+        },
+        "repeated gameAroundHis history": 1
+    },
+    "brnnUserMaxAllowBetPoint": {
+        "required string maxAllowPoint": 1
+    },
+    "brnnGamerHistory": {
+        "message brnnGamerHistoryPerson": {
+            "optional int32 uid": 1,
+            "required string startDate": 2,
+            "required string winPoint": 3,
+            "required string tax": 4
+        },
+        "repeated brnnGamerHistoryPerson history": 1
+    },
+    "message brnnGamerInfo": {
+        "message brnnBullBetPoint": {
+            "required int32 areaPos": 1,
+            "required string betPoint": 2
+        },
+        "required int32 userPos": 1,
+        "repeated brnnBullBetPoint betInfo": 2,
+        "required int32 winCount": 3,
+        "required int32 totalBets": 4
+    },
+    "brnnNotifyCurrentGameInfo": {
+        "message brnnBullHandle": {
+            "required int32 areaPos": 1,
+            "optional int32 type": 2,
+            "repeated Rune cardRunes": 3,
+            "optional string betPoint": 4,
+            "optional int32 isWin": 5,
+            "optional int32 boost": 6
+        },
+        "optional int32 state": 1,
+        "optional int32 timer": 2,
+        "repeated brnnBullHandle gameInfo": 3,
+        "repeated brnnGamerInfo gamerInfo": 4,
+        "required int32 bankPos": 5,
+        "required int32 bankCount": 6
+    },
+    "brnnCleanGamerInfo": {
+        "message brnnBullHandle": {
+            "required int32 areaPos": 1,
+            "optional string betPoint": 2
+        },
+        "required int32 userPos": 1,
+        "repeated brnnBullHandle gameChgInfo": 2
+    },
+    "brnnSendCard": {
+        "message brnnBullHandle": {
+            "required int32 areaPos": 1,
+            "optional int32 type": 2,
+            "repeated Rune cardRunes": 3,
+            "optional string betPoint": 4,
+            "optional int32 isWin": 5,
+            "optional int32 boost": 6
+        },
+        "repeated brnnBullHandle gameInfo": 1
+    },
+    "brnnDoBankBroadcast": {
+        "required int32 rPos": 1
+    },
+    "brnnChangeBankBroadcast": {
+        "required int32 rPos": 1,
+        "optional int32 chgInfo": 2
+    },
+    "brnnDoBetBroadcast": {
+        "required int32 userPos": 1,
+        "required int32 areaPos": 2,
+        "required string betPoint": 3
+    },
+    "brnnGamePhaseChange": {
+        "required int32 state": 1,
+        "required int32 timer": 2
+    },
+    "brnnBankList": {
+        "message bankUser": {
+            "required int32 uid": 1,
+            "required int32 userPos": 2
+        },
+        "repeated bankUser bankList": 1,
+        "optional int32 continousCount": 2
+    },
+    "brnnShowUserInfo": {
+        "message userPersonInfo": {
+            "required int32 userPos": 1,
+            "required string totalGold": 2,
+            "required string chgGold": 3,
+            "repeated int32 winAreaPos": 4,
+            "optional string tax": 5,
+            "optional int32 winCount": 6,
+            "optional int32 totalBets": 7
+        },
+        "repeated userPersonInfo showUserInfo": 1
+    },
+    "brnnSendUserPrise": {
+        "required string userGetPrise": 1
+    },
+    "nnNotifyBullResult": {
+        "required int32 bullType": 1,
+        "repeated Rune cardRunes": 2
+    },
+    "jhGamePhaseChange": {
+        "required int32 state": 1,
+        "required int32 timer": 2
+    },
+    "jhBankerAndMagicBroadcast": {
+        "required uInt32 rPos": 1,
+        "optional uInt32 symbol": 2
+    },
+    "jhNotifyGamerInfos": {
+        "repeated uInt32 gamerRPos": 1
+    },
+    "jhNotifyRound": {
+        "required uInt32 round": 1,
+        "required int32 roundCanAllIn": 2
+    },
+    "jhNotifyBets": {
+        "required string currentBets": 1,
+        "required string totalBets": 2
+    },
+    "jhTurnStartBroadcast": {
+        "required uInt32 rPos": 1,
+        "required int32 forceChallenge": 2,
+        "required int32 timer": 3
+    },
+    "jhDoBetBroadcast": {
+        "required uInt32 rPos": 1,
+        "required int32 betType": 2,
+        "required string betPoints": 3,
+        "required string totalBetPoints": 4,
+        "required string remainBetPoints": 5
+    },
+    "jhNotifyCards": {
+        "required int32 cardType": 1,
+        "repeated Rune cardRunes": 2
+    },
+    "jhFaceUpBroadcast": {
+        "required uInt32 rPos": 1
+    },
+    "jhChallengeFail": {
+        "required uInt32 rPos": 1
+    },
+    "jhChallengeBroadcast": {
+        "required uInt32 crPos": 1,
+        "required uInt32 drPos": 2,
+        "required uInt32 win": 3
+    },
+    "jhPaybackBroadcast": {
+        "required uInt32 rPos": 1,
+        "required string paybackBetPoints": 2,
+        "required string totalBetPoints": 3,
+        "required string remainBetPoints": 4
+    },
+    "jhDiscardBroadcast": {
+        "required uInt32 rPos": 1
+    },
+    "jhShowCardsBroadcast": {
+        "required uInt32 rPos": 1,
+        "required int32 cardType": 2,
+        "repeated Rune cardRunes": 3
+    },
+    "jhNotifyResult": {
+        "message RuneAndPos": {
+            "required uInt32 rPos": 1,
+            "required int32 isWinner": 2,
+            "required int32 cardType": 3,
+            "repeated Rune cardRunes": 4
+        },
+        "message GamerInfo": {
+            "message LuckMoneyFrom": {
+                "required uInt32 rPos": 1,
+                "required string luckMoney": 2
+            },
+            "required uInt32 rPos": 1,
+            "repeated LuckMoneyFrom luckMoneyFrom": 3,
+            "required string tax": 4,
+            "required string postTaxEarn": 5,
+            "required string money": 6,
+            "required string score": 7,
+            "required int32 isWinner": 8
+        },
+        "required int32 isSingleNotify": 1,
+        "repeated GamerInfo gamerInfos": 2,
+        "repeated RuneAndPos visibleRunes": 3,
+        "required int32 isResultingBySys": 4
+    },
+    "jhNotifyCurrentGameInfo": {
+        "message Info": {
+            "required uInt32 rPos": 1,
+            "required int32 job": 2,
+            "required string totalBetPoints": 3,
+            "required string remainBetPoints": 4,
+            "required int32 isFaceUp": 5,
+            "optional int32 latestBetType": 6,
+            "optional int32 isWinner": 7,
+            "optional int32 cardType": 8,
+            "repeated Rune cardRunes": 9,
+            "optional string money": 10,
+            "optional string score": 11
+        },
+        "required uInt32 state": 1,
+        "required int32 timer": 2,
+        "required uInt32 round": 3,
+        "required string currentBets": 4,
+        "required string totalBets": 5,
+        "optional uInt32 magicSymbol": 6,
+        "optional uInt32 turnState": 7,
+        "optional uInt32 turnStateTimer": 8,
+        "optional uInt32 currRPos": 9,
+        "optional uInt32 currForceChallenge": 10,
+        "optional int32 roundCanAllIn": 11,
+        "required uInt32 hasGamerAllIn": 12,
+        "repeated Info gamerInfo": 13
+    },
+    "shGamePhaseChange": {
+        "required int32 state": 1,
+        "required int32 timer": 2
+    },
+    "shNotifyGamerInfos": {
+        "repeated int32 gamerRPos": 1
+    },
+    "message RuneAndIndex": {
+        "required int32 index": 1,
+        "required int32 rune": 2
+    },
+    "shNotifyCards": {
+        "message Info": {
+            "required uInt32 rPos": 1,
+            "repeated RuneAndIndex cardRunes": 2
+        },
+        "repeated Info infos": 1,
+        "optional int32 selectFaceUpTime": 2
+    },
+    "shDoBetBroadcast": {
+        "required uInt32 rPos": 1,
+        "required int32 betType": 2,
+        "required string betPoints": 3,
+        "required string remainBetPoints": 4
+    },
+    "shNotifyRound": {
+        "required int32 round": 1,
+        "required int32 canShowhand": 2
+    },
+    "shNotifyPartialCardType": {
+        "required int32 cardType": 1
+    },
+    "shNotifyBetsMax": {
+        "required string betsMax": 1,
+        "required string roundBetsMax": 2
+    },
+    "shNotifyBets": {
+        "required string currRoundBets": 1,
+        "required string totalBets": 2
+    },
+    "shDiscardBroadcast": {
+        "required int32 rPos": 1
+    },
+    "shTurnStartBroadcast": {
+        "required int32 rPos": 1,
+        "required int32 timer": 2
+    },
+    "shNotifyResult": {
+        "message Info": {
+            "required int32 rPos": 1,
+            "required string tax": 2,
+            "required string postTaxEarn": 3,
+            "required string money": 4,
+            "required string score": 5,
+            "required int32 isWinner": 7,
+            "optional int32 cardType": 8,
+            "repeated Rune cardRunes": 9
+        },
+        "required int32 isSingleNotify": 1,
+        "repeated Info gamerInfos": 2
+    },
+    "shNotifyDrawer": {
+        "required int32 round": 1,
+        "required int32 rPos": 2,
+        "required int32 cardType": 3,
+        "required int32 keyCardRune": 4
+    },
+    "shNotifyCurrentGameInfo": {
+        "message Info": {
+            "required uInt32 rPos": 1,
+            "required string currRoundTotalBetPoints": 2,
+            "required int32 currRoundLatestBetType": 3,
+            "required string remainBetPoints": 4,
+            "optional int32 partialCardType": 5,
+            "optional int32 cardType": 6,
+            "repeated Rune cardRunes": 7,
+            "optional int32 isWinner": 8,
+            "required int32 isSelectedFaceUpCard": 9,
+            "required int32 isDiscard": 10,
+            "optional string money": 11,
+            "optional string score": 12
+        },
+        "required uInt32 gameState": 1,
+        "required int32 gameStateTimer": 2,
+        "required string betsMax": 3,
+        "optional int32 round": 4,
+        "optional uInt32 turnState": 5,
+        "optional int32 turnStateTimer": 6,
+        "optional uInt32 currRPos": 7,
+        "optional uInt32 currDrawerRPos": 8,
+        "optional int32 currRoundCanShowhand": 9,
+        "optional string currRoundBetsMax": 10,
+        "optional string currRoundBets": 11,
+        "optional string totalBets": 12,
+        "repeated Info gamerInfos": 13
+    },
+    "XZNotifyUserWaitOutPai": {
+        "required int32 curOptrPos": 1,
+        "required int32 lastOutPai": 2,
+        "required int32 lastOutPairPos": 3,
+        "required int32 leftTime": 4
+    },
+    "XZNotifyPengGangHu": {
+        "required int32 peng": 1,
+        "required int32 gang": 2,
+        "required int32 hu": 3,
+        "required int32 leftTime": 4
+    },
+    "XZNotifychange3Card": {
+        "required int32 changeType": 1,
+        "message PaisInfo": {
+            "required int32 rPos": 1,
+            "repeated int32 pais": 2
+        },
+        "repeated PaisInfo paisInfo": 2
+    },
+    "XZNotifyDingQue": {
+        "message QueInfo": {
+            "required int32 rPos": 1,
+            "required int32 queType": 2
+        },
+        "repeated QueInfo queInfo": 1
+    },
+    "XZGameStatus": {
+        "required int32 status": 1,
+        "required int32 leftTime": 2
+    },
+    "XZSendPai": {
+        "repeated int32 handlePai": 1,
+        "required int32 bankerPos": 2
+    },
+    "XZNotifyUserOutCard": {
+        "required int32 rPos": 1,
+        "required int32 pai": 2
+    },
+    "XZNotifyUserChangeScore": {
+        "repeated int32 type": 1,
+        "message ChangeScore": {
+            "required int32 rPos": 1,
+            "required int32 changeScore": 2
+        },
+        "repeated ChangeScore changeScore": 2
+    },
+    "XZNotifyUserUpPai": {
+        "required int32 uprPos": 1,
+        "required int32 upPai": 2
+    },
+    "message PengGangInfo": {
+        "required int32 type": 1,
+        "required int32 pai": 2
+    },
+    "XZNotifyUserGangCard": {
+        "required int32 rPos": 1,
+        "required PengGangInfo info": 2
+    },
+    "XZNotifyUserHu": {
+        "repeated int32 rPoss": 1,
+        "required int32 huPai": 2
+    },
+    "XZNotifyUserPengCard": {
+        "required int32 rPos": 1,
+        "required PengGangInfo info": 2
+    },
+    "XZUserHasSelected": {
+        "required int32 rPos": 1
+    },
+    "XZUserHasDingQue": {
+        "required int32 rPos": 1
+    },
+    "XZGameResult": {
+        "message Result": {
+            "required int32 huPai": 1,
+            "required int32 rPos": 2,
+            "repeated int32 handlePai": 3
+        },
+        "repeated Result results": 1,
+        "required int32 leftTime": 2
+    },
+    "XZGameStation": {
+        "required int32 gameStatus": 1,
+        "required int32 leftTime": 2,
+        "optional int32 bankerStation": 3,
+        "repeated int32 handlePai": 4,
+        "optional int32 curOptrPos": 5,
+        "optional int32 curInPai": 6,
+        "optional int32 lastOutPai": 7,
+        "optional int32 lastOutPairPos": 8,
+        "message XZUser": {
+            "required int32 rPos": 1,
+            "optional int32 hasSelected": 2,
+            "repeated int32 select3Pai": 3,
+            "optional int32 hasDingQue": 4,
+            "optional int32 queType": 5,
+            "repeated int32 deskPai": 6,
+            "repeated int32 paoIndex": 7,
+            "optional int32 userState": 8,
+            "optional int32 huPai": 9,
+            "repeated PengGangInfo pgInfos": 10,
+            "repeated int32 handlePai": 11,
+            "optional string location": 12,
+            "optional int32 avatar": 13,
+            "optional int32 gender": 14,
+            "optional string money": 15
+        },
+        "repeated XZUser users": 9,
+        "message PGHInfo": {
+            "required int32 peng": 1,
+            "required int32 gang": 2,
+            "required int32 hu": 3
+        },
+        "optional PGHInfo pghInfo": 10,
+        "message Score": {
+            "repeated int32 type": 1,
+            "message UserChangeScore": {
+                "required int32 rPos": 1,
+                "required int32 changeScore": 2
+            },
+            "repeated UserChangeScore changeScore": 2
+        },
+        "repeated Score scores": 11,
+        "optional int32 remainPaiCount": 12
+    },
+    "XZGameOver": {
+        "message GameResult": {
+            "required int32 rPos": 1,
+            "required int32 ziMoTimes": 2,
+            "required int32 jiePaoTimes": 3,
+            "required int32 dianPaoTimes": 4,
+            "required int32 anGangTimes": 5,
+            "required int32 mingGangTimes": 6,
+            "required int32 chaDaJiaoTimes": 7,
+            "required int32 huaZhuTimes": 8,
+            "optional string giveMoney": 9
+        },
+        "repeated GameResult gameResult": 1
+    },
+    "XZUserTax": {
+        "required int32 rPos": 1,
+        "required string tax": 2
+    },
+    "auth.authHandler.sendLoginVerifyCode": {
+        "required uInt32 code": 1
+    },
+    "ddzSendCard": {
+        "repeated uInt32 handleCards": 1
+    },
+    "ddzUserEnterJiaoFen": {
+        "required uInt32 leftTime": 1,
+        "required uInt32 rPos": 2
+    },
+    "ddzBroadcastJiaoFen": {
+        "required uInt32 point": 1,
+        "required uInt32 rPos": 2
+    },
+    "ddzAllUserNotJiaoFen": {},
+    "ddzBroadcastDiZhu": {
+        "required uInt32 rPos": 1,
+        "repeated uInt32 cards": 2
+    },
+    "ddzEnterAddMulti": {
+        "required uInt32 leftTime": 1
+    },
+    "ddzBroadcastAddMulti": {
+        "required uInt32 rPos": 1,
+        "required uInt32 add": 2
+    },
+    "ddzUserEnterPlayCards": {
+        "required int32 leftTime": 1,
+        "required uInt32 rPos": 2,
+        "required uInt32 first": 3
+    },
+    "ddzBroUserPlayCards": {
+        "required uInt32 rPos": 1,
+        "repeated uInt32 cards": 2,
+        "required uInt32 shape": 3
+    },
+    "ddzBroUserNotPlay": {
+        "required uInt32 rPos": 1
+    },
+    "ddzBroEnterResult": {
+        "message UserResult": {
+            "required uInt32 rPos": 1,
+            "required string chgScore": 2,
+            "required uInt32 totalMulti": 3,
+            "repeated uInt32 remainCards": 4,
+            "required string tax": 5
+        },
+        "repeated UserResult ur": 1,
+        "required uInt32 bombNum": 2,
+        "required uInt32 spring": 3
+    },
+    "ddzLoadGameInfo": {
+        "message ddzUser": {
+            "required uInt32 rPos": 1,
+            "optional int32 JiaoStatus": 2,
+            "required int32 AddStatus": 3,
+            "repeated uInt32 handleCards": 4,
+            "optional string chgMoney": 5,
+            "optional string tax": 6,
+            "optional uInt32 remainCount": 7,
+            "optional uInt32 totalMulti": 8,
+            "required string money": 9,
+            "optional string location": 10,
+            "required int32 gender": 11,
+            "required int32 hosted": 12
+        },
+        "required uInt32 phase": 1,
+        "required int32 leftTime": 2,
+        "optional uInt32 optPos": 3,
+        "optional uInt32 first": 4,
+        "repeated uInt32 lastCards": 5,
+        "optional uInt32 lastPos": 6,
+        "repeated uInt32 cardsCounter": 7,
+        "repeated ddzUser users": 8,
+        "repeated uInt32 ddzCards": 9,
+        "optional uInt32 ddzPos": 10
+    },
+    "message DDZBroHostedInfo": {
+        "required uInt32 rPos": 1,
+        "required uInt32 state": 2
+    },
+    "message HHCardsInfo": {
+        "required int32 area": 1,
+        "repeated int32 cards": 2,
+        "required int32 shape": 3
+    },
+    "hhBroadcastEnterDealCard": {
+        "required uInt32 leftTime": 1,
+        "repeated HHCardsInfo cardsInfo": 2
+    },
+    "hhBroadcastEnterBet": {
+        "required uInt32 leftTime": 1
+    },
+    "hhBroadcastUserDoBets": {
+        "required uInt32 rPos": 1,
+        "required uInt32 bets": 2,
+        "required uInt32 area": 3
+    },
+    "message areaBetInfo": {
+        "required uInt32 area": 1,
+        "required string betPoint": 2
+    },
+    "hhGameResult": {
+        "required uInt32 winShape": 1,
+        "required uInt32 redWin": 2,
+        "message hhUser": {
+            "required uInt32 rPos": 1,
+            "required string chgMoney": 2,
+            "required uInt32 winCount": 3,
+            "required uInt32 totalBets": 4
+        },
+        "repeated hhUser users": 3
+    },
+    "hhChangeBigRegalGambleGod": {
+        "required int32 rPosBigRegal": 1,
+        "required int32 rPosGambleGod": 2,
+        "optional string goldBigRegal": 3,
+        "optional string goldGambleGod": 4
+    },
+    "hhGameStation": {
+        "required int32 gameStatus": 1,
+        "required int32 leftTime": 2,
+        "message WinLoseRecord": {
+            "required int32 redWin": 1,
+            "required int32 winShape": 2
+        },
+        "message userInfo": {
+            "required uInt32 rPos": 1,
+            "repeated areaBetInfo betsInfo": 2,
+            "required uInt32 winCount": 3,
+            "required uInt32 totalBets": 4
+        },
+        "repeated WinLoseRecord winLoseRecord": 3,
+        "repeated HHCardsInfo cardsInfo": 4,
+        "optional int32 redWin": 5,
+        "repeated userInfo users": 6,
+        "repeated areaBetInfo areaBet": 7
+    },
+    "message LHCardsInfo": {
+        "required int32 area": 1,
+        "required int32 card": 2
+    },
+    "lhBroadcastEnterDealCard": {
+        "required uInt32 leftTime": 1,
+        "repeated LHCardsInfo cardsInfo": 2
+    },
+    "lhBroadcastEnterBet": {
+        "required uInt32 leftTime": 1
+    },
+    "lhBroadcastUserDoBets": {
+        "required uInt32 rPos": 1,
+        "required uInt32 bets": 2,
+        "required uInt32 area": 3
+    },
+    "lhGameResult": {
+        "required uInt32 winArea": 1,
+        "message lhUser": {
+            "required uInt32 rPos": 1,
+            "required string chgMoney": 2,
+            "required uInt32 winCount": 3,
+            "required uInt32 totalBets": 4
+        },
+        "repeated lhUser users": 2
+    },
+    "lhChangeBigRegalGambleGod": {
+        "required int32 rPosBigRegal": 1,
+        "required int32 rPosGambleGod": 2
+    },
+    "lhGameStation": {
+        "required int32 gameStatus": 1,
+        "required int32 leftTime": 2,
+        "message userInfo": {
+            "required uInt32 rPos": 1,
+            "repeated areaBetInfo betsInfo": 2,
+            "required uInt32 winCount": 3,
+            "required uInt32 totalBets": 4
+        },
+        "repeated int32 winRecord": 3,
+        "repeated LHCardsInfo cardsInfo": 4,
+        "optional int32 winArea": 5,
+        "repeated userInfo users": 6,
+        "repeated areaBetInfo areaBet": 7
+    },
+    "byNotifyCurrentGameInfo": {
+        "message LockTarget": {
+            "optional int32 massId": 1,
+            "required int32 fishId": 2
+        },
+        "message GamerInfos": {
+            "required int32 rPos": 1,
+            "required int32 ratio": 2,
+            "optional int32 autoAngle": 3,
+            "required string remainPoints": 4,
+            "required int32 bulletStyle": 5,
+            "optional LockTarget lockTarget": 6
+        },
+        "message RegularInfos": {
+            "required int32 fishId": 1,
+            "required int32 fishType": 2,
+            "required int32 routeId": 3,
+            "required int32 offsetId": 4,
+            "required int32 aliveTime": 5
+        },
+        "message MassInfos": {
+            "required int32 massId": 1,
+            "required int32 type": 2,
+            "required int32 aliveTime": 3,
+            "required int32 liveTime": 4,
+            "repeated int32 fishes": 5
+        },
+        "required int32 state": 1,
+        "required int32 phaseTimer": 2,
+        "required int32 maxBulletStyle": 3,
+        "required string diffAmount": 4,
+        "repeated GamerInfos gamerInfos": 5,
+        "repeated RegularInfos regularInfos": 6,
+        "repeated MassInfos massInfos": 7
+    },
+    "byNotifyCurrentGameCreateFish": {
+        "message Fishes": {
+            "required int32 fishId": 1,
+            "required int32 fishType": 2,
+            "required int32 routeId": 3,
+            "required int32 offsetId": 4,
+            "required int32 aliveTime": 5
+        },
+        "repeated Fishes fishes": 1
+    },
+    "byNotifyCurrentGameUserHit": {
+        "required int32 rPos": 1,
+        "optional int32 massId": 2,
+        "required int32 fishId": 3,
+        "required string gainMoney": 4
+    },
+    "byNotifyCurrentGameUserFire": {
+        "required int32 fireMsg": 1
+    },
+    "byNotifyCurrentGameLock": {
+        "required int32 rPos": 1,
+        "required int32 on": 2,
+        "optional int32 fishId": 3,
+        "optional int32 massId": 4
+    },
+    "byNotifyCurrentGameAutoMatic": {
+        "required int32 rPos": 1,
+        "required int32 on": 2,
+        "optional int32 angle": 3
+    },
+    "byNotifyCurrentGameDeathFish": {
+        "repeated int32 deathFish": 1
+    },
+    "byNotifyCurrentBroadCastState": {
+        "required int32 state": 1,
+        "required int32 time": 2
+    },
+    "byNotifyCurrentReturnMoney": {
+        "required string backMoney": 1,
+        "required int32 rPos": 2
+    },
+    "byNotifyCurrentGameMassiveCreate": {
+        "message Fishes": {
+            "required int32 massiveId": 1,
+            "required int32 massiveType": 2
+        },
+        "repeated Fishes fishes": 1
+    },
+    "byNotifyCurrentGameDeathMassive": {
+        "repeated int32 deathMassive": 1
+    },
+    "byNotifyCurrentGameUserBulletRatio": {
+        "required int32 rPos": 1,
+        "required int32 ratio": 2
+    },
+    "byNotifyCurrentGameUserChaButtleStyle": {
+        "required int32 rPos": 1,
+        "required int32 bulletStyle": 2
+    },
+    "byNotifyCurrentGameUserGetRemainPoints": {
+        "message GamerRemainPointsInfo": {
+            "required int32 rPos": 1,
+            "required string remainPoints": 2
+        },
+        "repeated GamerRemainPointsInfo gamerRemainPointsInfo": 1
+    },
+    "byNotifyCurrentGameUserCastSkillMsg": {
+        "required int32 rPos": 1,
+        "repeated int32 castFishIds": 2,
+        "optional string gainMoney": 3,
+        "optional int32 frozenTime": 4,
+        "required int32 skillType": 5
+    },
+    "pdkNotifyDealData": {
+        "required uInt32 firstPos": 1,
+        "repeated int32 handleCards": 2
+    },
+    "pdkNoticeUsersPlayCards": {
+        "required uInt32 rPos": 1,
+        "repeated uInt32 cards": 2,
+        "required uInt32 shape": 3
+    },
+    "pdkNoticeUsersNotPlay": {
+        "required uInt32 rPos": 1
+    },
+    "pdkNoticeUsersStartCards": {
+        "required int32 leftTime": 1,
+        "required int32 rPos": 2,
+        "required int32 first": 3
+    },
+    "pdkNoticeUserEnterPlayCards": {
+        "required uInt32 leftTime": 1,
+        "required uInt32 rPos": 2,
+        "required uInt32 first": 3
+    },
+    "pdkNoticeUserReslut": {
+        "message PdkReslut": {
+            "required int32 pos": 1,
+            "required string money": 2,
+            "repeated int32 remainCards": 3,
+            "required uInt32 isClosed": 5
+        },
+        "repeated PdkReslut pdkReslut": 1,
+        "required int32 payForPos": 2
+    },
+    "pdkLoadGameInfo": {
+        "required int32 isShow": 1,
+        "required int32 leftTime": 2,
+        "required int32 plCarPos": 3,
+        "required int32 befPos": 4,
+        "repeated uInt32 beforeCards": 5,
+        "repeated uInt32 handCards": 6,
+        "required uInt32 status": 7,
+        "required uInt32 first": 8,
+        "message UserInfo": {
+            "required uInt32 pos": 1,
+            "required string money": 2,
+            "required uInt32 remainCount": 3,
+            "required uInt32 gender": 4,
+            "required uInt32 hosted": 5,
+            "required string location": 6,
+            "required string boomMoney": 7
+        },
+        "repeated UserInfo userInfo": 9,
+        "repeated uInt32 alPlayCards": 10
+    },
+    "pdkNoticeBoomGetMoney": {
+        "message BoomInfo": {
+            "required uInt32 pos": 1,
+            "required string boomMoney": 2
+        },
+        "repeated BoomInfo boom": 1
+    },
+    "pdkNoticeUserAuto": {
+        "required uInt32 rPos": 1,
+        "required uInt32 isAuto": 2
+    },
+    "ERMJSendPai": {
+        "required int32 bankerPos": 1,
+        "repeated int32 handlePai": 2,
+        "required int32 quanFeng": 3,
+        "required int32 menFeng": 4
+    },
+    "ERMJNotifyChiPengGangHu": {
+        "required int32 chi": 1,
+        "required int32 peng": 2,
+        "required int32 gang": 3,
+        "required int32 hu": 4,
+        "required int32 leftTime": 5
+    },
+    "ERMJNotifyUserWaitOutPai": {
+        "required int32 curOptrPos": 1,
+        "required int32 lastOutPai": 2,
+        "required int32 lastOutPairPos": 3,
+        "required int32 leftTime": 4
+    },
+    "ERMJNotifyUserUpPai": {
+        "required int32 uprPos": 1,
+        "required int32 upPai": 2
+    },
+    "ERMJNotifyUserOutCard": {
+        "required int32 rPos": 1,
+        "required int32 pai": 2,
+        "required int32 isTing": 3
+    },
+    "ERMJGameResult": {
+        "message Result": {
+            "required int32 huPai": 1,
+            "required int32 rPos": 2,
+            "repeated int32 handlePai": 3,
+            "required string chgMoney": 4
+        },
+        "repeated Result results": 1,
+        "required int32 leftTime": 2,
+        "repeated int32 huType": 3
+    },
+    "ERMJNotifyUserPengPai": {
+        "message PengGangInfo": {
+            "required int32 type": 1,
+            "required int32 pai": 2
+        },
+        "required int32 rPos": 1,
+        "required PengGangInfo info": 2
+    },
+    "ERMJNotifyUserChiPai": {
+        "message PengGangInfo": {
+            "required int32 type": 1,
+            "required int32 pai": 2,
+            "required int32 chiPai": 3
+        },
+        "required int32 rPos": 1,
+        "required PengGangInfo info": 2
+    },
+    "ERMJNotifyUserGangPai": {
+        "message PengGangInfo": {
+            "required int32 type": 1,
+            "required int32 pai": 2
+        },
+        "required int32 rPos": 1,
+        "required PengGangInfo info": 2
+    },
+    "ERMJNotifyUserHu": {
+        "required int32 rPoss": 1,
+        "required int32 huPai": 2
+    },
+    "ERMJNotifyUserAuto": {
+        "required int32 isAuto": 1
+    },
+    "ERMJNotifyTingNextHandlePais": {
+        "repeated int32 nextPais": 1
+    },
+    "ERMJNotifyFangHuCount": {
+        "required int32 rPos": 1,
+        "required int32 fangHuCount": 2,
+        "required int32 pai": 3
+    },
+    "ERMJLoadGameInfo": {
+        "required int32 gameStatus": 1,
+        "required int32 leftTime": 2,
+        "optional int32 bankerStation": 3,
+        "repeated int32 handlePai": 4,
+        "repeated int32 nextHandlePai": 5,
+        "optional int32 quanFeng": 6,
+        "optional int32 curOptrPos": 7,
+        "optional int32 curInPai": 8,
+        "optional int32 lastOutPai": 9,
+        "optional int32 lastOutPairPos": 10,
+        "repeated int32 huType": 11,
+        "message PengGangInfo": {
+            "required int32 type": 1,
+            "required int32 pai": 2
+        },
+        "message ERMJUser": {
+            "required int32 rPos": 1,
+            "repeated int32 deskPai": 2,
+            "repeated PengGangInfo pgInfos": 3,
+            "optional int32 userState": 4,
+            "optional int32 huPai": 5,
+            "optional int32 isTing": 6,
+            "repeated int32 jiaBeiPais": 7,
+            "repeated int32 jiaBeiPaiPos": 8,
+            "optional int32 menFeng": 9,
+            "optional string location": 10,
+            "optional int32 avatar": 11,
+            "optional int32 gender": 12,
+            "optional string money": 13,
+            "optional string chgMoney": 14,
+            "repeated int32 handlePai": 15
+        },
+        "repeated ERMJUser users": 12,
+        "message PGHInfo": {
+            "required int32 chi": 1,
+            "required int32 peng": 2,
+            "required int32 gang": 3,
+            "required int32 hu": 4
+        },
+        "optional PGHInfo pghInfo": 13,
+        "optional int32 remainPaiCount": 14
+    },
+    "DZPKAppointBanker": {
+        "required int32 smallPos": 1,
+        "required int32 bigPos": 2,
+        "required string smallBets": 3,
+        "required int32 bankerPos": 4,
+        "required int32 status": 5
+    },
+    "DZPKSendPai": {
+        "repeated int32 handlePai": 1,
+        "required int32 status": 2
+    },
+    "DZPKOpt": {
+        "required int32 rPos": 1,
+        "required int32 time": 2,
+        "required int32 curRoundAddCnt": 3
+    },
+    "DZPKDealCards": {
+        "repeated int32 cards": 1,
+        "required int32 round": 2,
+        "required int32 leftTime": 3,
+        "required int32 status": 4,
+        "repeated int32 pools": 5
+    },
+    "DZPKStatusChange": {
+        "required int32 status": 1,
+        "required int32 leftTime": 2
+    },
+    "DZPKDoPot": {
+        "required int32 rPos": 1,
+        "required string pot": 2,
+        "required string userMoney": 3,
+        "required string totalBets": 4
+    },
+    "DZPKFold": {
+        "required int32 rPos": 1
+    },
+    "DZPKCheck": {
+        "required int32 rPos": 1
+    },
+    "DZPKFollow": {
+        "required int32 rPos": 1,
+        "required string bets": 2,
+        "required string userMoney": 3,
+        "required string totalBets": 4
+    },
+    "DZPKRaise": {
+        "required int32 rPos": 1,
+        "required string bets": 2,
+        "required string userMoney": 3,
+        "required string totalBets": 4
+    },
+    "DZPKAllIn": {
+        "required int32 rPos": 1,
+        "required string bets": 2,
+        "required string userMoney": 3,
+        "required string totalBets": 4
+    },
+    "DZPKDoBalance": {
+        "message UserInfo": {
+            "required int32 rPos": 1,
+            "required string tax": 2,
+            "required string chgMoney": 3,
+            "required string userMoney": 4,
+            "required int32 isWinner": 5,
+            "required int32 cardType": 6,
+            "repeated int32 maxCards": 7,
+            "repeated int32 handCards": 8,
+            "required string backMoney": 9
+        },
+        "repeated UserInfo userInfo": 1,
+        "repeated int32 pools": 2
+    },
+    "DZPKLoadGameInfo": {
+        "message UserInfo": {
+            "required int32 rPos": 1,
+            "required string money": 2,
+            "required int32 gender": 3,
+            "required string location": 4,
+            "repeated int32 handPai": 5,
+            "required int32 isFold": 6,
+            "required int32 isBanker": 7,
+            "required int32 isSmallBlind": 8,
+            "required int32 isBigBlind": 9,
+            "required int32 isAllIn": 10,
+            "required string totalBets": 11,
+            "required string curRoundBets": 12,
+            "required int32 isCurRoundSpeak": 13,
+            "required int32 curRoundAddBetCnt": 14
+        },
+        "required int32 leftTime": 1,
+        "required int32 status": 2,
+        "required string totalBets": 3,
+        "required string curRoundMaxBets": 4,
+        "required int32 curOptUser": 5,
+        "repeated int32 commonCards": 6,
+        "repeated UserInfo userInfo": 7,
+        "repeated int32 pools": 8
+    },
+    "DZPKTakeMoney": {
+        "required int32 rPos": 1,
+        "required string takeMoney": 2
+    },
+    "chat.clientHandler.orderTrack":{
+        "required int32 code": 1,
+        "message Orders": {
+            "required string _id": 1,
+            "optional string orderId": 2,
+            "required string gold": 3,
+            "required string aName": 4,
+            "required int32 state": 5,
+            "required int32 createDate": 6,
+            "optional int32 evaluation": 7
+        },
+        "repeated Orders orders": 2
+    } ,
+    "chat.clientHandler.orderInfo":{
+        "required uInt32 code": 1,
+        "optional string _id": 2,
+        "optional int32 aUid": 3,
+        "optional string aName": 4,
+        "message Msgs": {
+                "required int32 uid": 1,
+                "required int32 createDate": 2,
+                "required int32 msgType": 3,
+                "required string content": 4,
+                "required string img": 5,
+                "message Rcgs": {
+                    "required string recType": 1,
+                    "required string recStr": 2
+                },
+                "repeated Rcgs rcgTypes": 6,
+                "optional int32 read": 7
+            },
+        "repeated Msgs msgs": 5,
+        "optional int32 evaluation": 6,
+        "optional int32 gender": 7,
+        "optional int32 avatar": 8,
+        "optional int32 report": 9
+    },
+    "chat.clientHandler.getCommonAgent":{
+        "required uInt32 code": 1,
+        "message Agents": {
+                "required int32 aUid": 1,
+                "required string aName": 2
+            },
+        "repeated Agents agents": 2
+    },
+    "chat.clientHandler.delAgent":{
+        "required uInt32 code": 1
+    },
+    "chat.clientHandler.addAgent":{
+        "required uInt32 code": 1
+    },
+    "chat.clientHandler.updateEvaluation":{
+        "required uInt32 code": 1,
+        "optional string orderId": 2,
+        "optional int32 evaluation": 3
+    },
+    "chat.clientHandler.report":{
+        "required uInt32 code": 1
+    },
+    "ChatToClientMsg":{
+        "required string _id": 1,
+        "required int32 uid": 2,
+        "message Msgs": {
+            "required int32 uid": 1,
+            "required int32 createDate": 2,
+            "required int32 msgType": 3,
+            "required string content": 4,
+            "required string img": 5,
+            "message Rcgs": {
+                "required string recType": 1,
+                "required string recStr": 2
+            },
+            "repeated Rcgs rcgTypes": 6,
+            "optional int32 read": 7
+        },
+        "required Msgs msgs": 3
+    },
+    "OpenChat":{
+        "required string _id": 1,
+        "required int32 aUid": 2,
+        "required string aName": 3,
+        "message Msgs": {
+            "optional int32 uid": 1,
+            "optional int32 createDate": 2,
+            "optional int32 msgType": 3,
+            "optional string content": 4,
+            "optional string img": 5,
+            "message  Rcgs":{
+                "required string recType": 1,
+                "required string recStr": 2
+            },
+            "repeated Rcgs rcgTypes": 6,
+            "optional int32 read": 7
+        },
+        "repeated Msgs msgs": 4,
+        "required int32 evaluation": 5,
+        "required int32 createDate": 6,
+        "required int32 gender": 7,
+        "required int32 avatar": 8
+    },
+    "OrderState":{
+        "required string orderId": 1,
+        "required int32 state": 2
+    },
+    "MsgIsRead":{
+        "required string _id": 1
+    },
+    "AgentState":{
+        "required uInt32 code": 1
+    },
+    "chat.clientHandler.openRecharge":{
+        "required int32 code": 1,
+        "repeated string _ids": 2
+    },
+    "ChatRechargeNotify": {
+        "required string money": 1
+    },
+    "chat.clientHandler.recharge":{
+        "required int32 code": 1,
+        "optional int32 time": 2
+    },
+    "connector.entryHandler.agentEnter": {
+        "required uInt32 code": 1,
+        "optional uInt32 rCode": 2
+    },
+    "chat.agentHandler.enter":{
+        "required int32 code": 1,
+        "message Info": {
+            "required int32 uid": 1,
+            "required string name": 2,
+            "required int32 state": 3,
+            "required int32 gender": 4,
+            "required int32 avatar": 5,
+            "required string gold": 6,
+            "required string pid": 7,
+            "required int32 todayOrderCnt": 8,
+            "required int32 todayOrderedCnt": 9,
+            "required int32 badReview": 10,
+            "required int32 goodReview": 11,
+            "required int32 report": 12
+        },
+        "optional Info info": 2
+    }
+}
