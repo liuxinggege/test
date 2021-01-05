@@ -11,7 +11,7 @@
     "mock": "cd mock && ts-node-dev mock-server.ts"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.8.0",
     "clipboard": "^2.0.4",
     "codemirror": "^5.48.2",
